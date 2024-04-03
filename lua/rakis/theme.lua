@@ -115,13 +115,13 @@ function M.setup()
     Keyword = { fg = c.orange300, style = options.styles.keywords }, --  any other keyword
     -- Exception     = { }, --  try, catch, throw
 
-    PreProc = { fg = c.red500 }, -- (preferred) generic Preprocessor
+    PreProc = { fg = c.magenta500 }, -- (preferred) generic Preprocessor
     -- Include       = { }, --  preprocessor #include
     -- Define        = { }, --   preprocessor #define
     -- Macro         = { }, --    same as Define
     -- PreCondit     = { }, --  preprocessor #if, #else, #endif, etc.
 
-    Type = { fg = c.yellow500 }, -- (preferred) int, long, char, etc.
+    Type = { fg = c.cyan300 }, -- (preferred) int, long, char, etc.
     -- StorageClass  = { }, -- static, register, volatile, etc.
     -- Structure     = { }, --  struct, union, enum, etc.
     -- Typedef       = { }, --  A typedef
@@ -283,8 +283,8 @@ function M.setup()
     ["@variable.parameter.builtin"] = { fg = c.yellow300 }, -- For builtin parameters of a function, e.g. "..." or Smali's p[1-99]
 
     --- Keywords
-    ["@keyword"] = { fg = c.green500, style = options.styles.keywords }, -- For keywords that don't fall in previous categories.
-    ["@keyword.function"] = { fg = c.green500, style = options.styles.functions }, -- For keywords used to define a fuction.
+    ["@keyword"] = { fg = c.orange700, style = options.styles.keywords }, -- For keywords that don't fall in previous categories.
+    ["@keyword.function"] = { fg = c.orange700, style = options.styles.functions }, -- For keywords used to define a fuction.
 
     ["@label"] = { fg = c.green500 }, -- For labels: `label:` in C and `:label:` in Lua.
 
@@ -632,8 +632,8 @@ function M.setup()
 
     CmpItemAbbr = { fg = c.fg, bg = c.none },
     CmpItemAbbrDeprecated = { fg = c.base01, bg = c.none, strikethrough = true },
-    CmpItemAbbrMatch = { fg = c.violet500, bg = c.none },
-    CmpItemAbbrMatchFuzzy = { fg = c.violet500, bg = c.none },
+    CmpItemAbbrMatch = { fg = c.orange300, bg = c.none },
+    CmpItemAbbrMatchFuzzy = { fg = c.orange300, bg = c.none },
 
     CmpItemMenu = { fg = c.base01, bg = c.none },
 
