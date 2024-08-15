@@ -1,1 +1,1 @@
-require("rakis")._load()
+require("rakis").load()
