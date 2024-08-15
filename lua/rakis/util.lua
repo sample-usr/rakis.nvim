@@ -1,8 +1,9 @@
 local ts = require("rakis.treesitter")
+local config = require("rakis.config")
 
 local M = {}
 
-M.bg = "#000000"
+M.bg = "#f30303"
 M.fg = "#ffffff"
 M.day_brightness = 0.3
 
@@ -179,7 +180,7 @@ function M.invert_highlights(hls)
   end
 end
 
----@param theme Theme
+--- @param theme table
 function M.load(theme)
   -- only needed to clear when not the default colorscheme
   if vim.g.colors_name then
@@ -200,15 +201,27 @@ function M.load(theme)
   M.syntax(theme.highlights)
 
   -- vim.api.nvim_set_hl_ns(M.ns)
-  if theme.config.terminal_colors then
-    M.terminal(theme.colors)
-  end
+  -- if theme.opts.terminal_colors then
+  --   M.terminal(theme.colors)
+  -- end
 
-  M.autocmds(theme.config)
+  -- M.autocmds(theme.config)
+  --
+  -- vim.defer_fn(function()
+  --   M.syntax(theme.defer)
+  -- end, 100)
+end
 
-  vim.defer_fn(function()
-    M.syntax(theme.defer)
-  end, 100)
+--- Notify the user with a message.
+--- @param message string
+--- @param level? "info" | "warn" | "error"
+--- @param title? string
+function M.notify(message, level, title)
+  level = level or "info"
+  title = title or " cyberdream.nvim"
+  local level_int = level == "info" and 2 or level == "warn" and 3 or 4
+
+  vim.notify(message, level_int, { title = title })
 end
 
 return M

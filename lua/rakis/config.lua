@@ -1,41 +1,106 @@
+local default_colors = require("rakis.colors").default
 local M = {}
 
+---@class RakisHighlight
+---@field fg? string
+---@field bg? string
+---@field sp? string
+---@field bold? boolean
+---@field italic? boolean
+---@field underline? boolean
+---@field strikethrough? boolean
+
+---@alias RakisOverrideFn fun(palette: RakisPalette): RakisHighlight
+
+---@class ThemeConfig
+---@field variant? "default" | "light" | "auto"
+---@field colors? RakisPalette
+---@field highlights? table<string, RakisHighlight>
+---@field overrides? RakisOverrideFn
+---@field cache? boolean
+
+---@alias RakisTelescopeStyle "nvchad" | "flat"
+
+---@class extensions
+---@field alpha? boolean
+---@field cmp? boolean
+---@field dashboard? boolean
+---@field fzflua? boolean
+---@field gitpad? boolean
+---@field gitsigns? boolean
+---@field grapple? boolean
+---@field grugfar? boolean
+---@field heirline? boolean
+---@field helpview? boolean
+---@field hop? boolean
+---@field indentblankline? boolean
+---@field kubectl? boolean
+---@field lazy? boolean
+---@field leap? boolean
+---@field markdown? boolean
+---@field markview? boolean
+---@field mini? boolean
+---@field neogit? boolean
+---@field noice? boolean
+---@field notify? boolean
+---@field rainbow_delimiters? boolean
+---@field telescope? boolean
+---@field treesitter? boolean
+---@field treesittercontext? boolean
+---@field trouble? boolean
+---@field whichkey? boolean
+
 ---@class Config
----@field on_colors fun(colors: ColorScheme)
----@field on_highlights fun(highlights: Highlights, colors: ColorScheme)
-local defaults = {
-  style = "night", -- The theme comes in two styles, `day` and `night`
-  light_style = "day", -- The theme is used when the background is set to light
-  transparent = true, -- Enable this to disable setting the background color
-  terminal_colors = true, -- Configure the colors used when opening a `:terminal` in Neovim
-  styles = {
-    -- Style to be applied to different syntax groups
-    -- Value is any valid attr-list value for `:help nvim_set_hl`
-    comments = { italic = true },
-    keywords = { italic = true },
-    functions = {},
-    variables = {},
-    -- Background styles. Can be "dark", "transparent" or "normal"
-    sidebars = "dark", -- style for sidebars, see below
-    floats = "dark", -- style for floating windows
+---@field transparent? boolean
+---@field italic_comments? boolean
+---@field hide_fillchars? boolean
+---@field borderless_telescope? boolean | { border: boolean, style: RakisTelescopeStyle }
+---@field terminal_colors? boolean
+---@field theme? ThemeConfig
+---@field extensions? extensions
+local default_options = {
+  transparent = false,
+  italic_comments = false,
+  hide_fillchars = false,
+  borderless_telescope = true,
+  terminal_colors = true,
+  cache = false,
+
+  theme = {
+    variant = "default",
+    colors = default_colors,
+    highlights = {},
   },
-  sidebars = { "qf", "help" }, -- Set a darker background on sidebar-like windows. For example: `["qf", "vista_kind", "terminal", "packer"]`
-  day_brightness = 0.3, -- Adjusts the brightness of the colors of the **Day** style. Number between 0 and 1, from dull to vibrant colors
-  hide_inactive_statusline = false, -- Enabling this option, will hide inactive statuslines and replace them with a thin border instead. Should work with the standard **StatusLine** and **LuaLine**.
-  dim_inactive = false, -- dims inactive windows
-  lualine_bold = false, -- When `true`, section headers in the lualine theme will be bold
 
-  --- You can override specific color groups to use other groups or a hex color
-  --- function will be called with a ColorScheme table
-  ---@param colors ColorScheme
-  on_colors = function(colors) end,
-
-  --- You can override specific highlights to use other groups or a hex color
-  --- function will be called with a Highlights and ColorScheme table
-  ---@param highlights Highlights
-  ---@param colors ColorScheme
-  on_highlights = function(highlights, colors) end,
-  use_background = true, -- can be light/dark/auto. When auto, background will be set to vim.o.background
+  extensions = {
+    -- alpha = true,
+    -- cmp = true,
+    -- dashboard = true,
+    -- fzflua = true,
+    -- gitpad = true,
+    -- gitsigns = true,
+    -- grapple = true,
+    -- grugfar = true,
+    -- heirline = true,
+    -- helpview = true,
+    -- hop = true,
+    -- indentblankline = true,
+    -- kubectl = true,
+    -- lazy = true,
+    -- leap = true,
+    -- markdown = true,
+    -- markview = true,
+    -- mini = true,
+    -- noice = true,
+    -- neogit = true,
+    -- notify = true,
+    -- rainbow_delimiters = true,
+    -- telescope = true,
+    -- treesitter = true,
+    -- treesittercontext = true,
+    -- trouble = true,
+    -- whichkey = true,
+  },
 }
 
 ---@type Config
@@ -43,16 +108,8 @@ M.options = {}
 
 ---@param options Config|nil
 function M.setup(options)
-  M.options = vim.tbl_deep_extend("force", {}, defaults, options or {})
-end
-
----@param options Config|nil
-function M.extend(options)
-  M.options = vim.tbl_deep_extend("force", {}, M.options or defaults, options or {})
-end
-
-function M.is_day()
-  return M.options.style == "day" or M.options.use_background and vim.o.background == "light"
+  M.options = vim.tbl_deep_extend("force", {}, default_options, options or {})
+  vim.g.rakis_opts = M.options
 end
 
 M.setup()
