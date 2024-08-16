@@ -1,0 +1,23 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/jesseduffield/lazygit/master/schema/config.json
+# rakis theme for lazygit
+gui:
+    border: rounded
+    theme:
+        activeBorderColor:
+            - "#994b52"
+        inactiveBorderColor:
+            - "#7d5d53"
+        searchingActiveBorderColor:
+            - "#3d888e"
+        optionsTextColor:
+            - "#f5daca"
+        selectedLineBgColor:
+            - "#f5daca"
+        cherryPickedCommitBgColor:
+            - "#f5daca"
+        cherryPickedCommitFgColor:
+            - "#fc9891"
+        unstagedChangesColor:
+            - "#f5be50"
+        defaultFgColor:
+            - "#ae8069"
