@@ -224,4 +224,16 @@ function M.notify(message, level, title)
   vim.notify(message, level_int, { title = title })
 end
 
+--- Parse a template string with a given table of colors.
+--- @param template string
+--- @param t table
+--- @return string
+function M.parse_extra_template(template, t)
+  for k, v in pairs(t) do
+    template = template:gsub("%${" .. k .. "}", v)
+  end
+
+  return template
+end
+
 return M
