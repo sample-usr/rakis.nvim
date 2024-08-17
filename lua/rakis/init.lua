@@ -17,7 +17,7 @@ M.colorscheme = M.load
 
 vim.api.nvim_create_user_command("RakisToggleMode", function()
   local new_variant = util.toggle_theme_variant()
-  util.toggle_lualine_theme()
+  -- util.toggle_lualine_theme()
   vim.api.nvim_exec_autocmds("User", { pattern = "RakisToggleMode", data = new_variant })
 end, {})
 
@@ -36,7 +36,7 @@ vim.api.nvim_create_autocmd("OptionSet", {
     if vim.g.rakis_opts.theme.variant ~= "auto" or vim.fn.execute("colorscheme"):find("rakis") == nil then
       return
     end
-    util.toggle_lualine_theme()
+    -- util.toggle_lualine_theme()
   end,
 })
 

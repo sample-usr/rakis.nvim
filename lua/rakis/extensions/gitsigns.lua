@@ -1,5 +1,5 @@
-local M = {}
 local util = require("rakis.util")
+local M = {}
 
 --- Get extension configuration
 --- @param opts Config

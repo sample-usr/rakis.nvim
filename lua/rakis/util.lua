@@ -236,4 +236,51 @@ function M.parse_extra_template(template, t)
   return template
 end
 
+--- Override options with a new table of values.
+--- @param new_opts Config
+--- @return Config
+function M.set_options(new_opts)
+  local opts = vim.g.rakis_opts
+  vim.g.rakis_opts = vim.tbl_deep_extend("force", opts, new_opts)
+
+  return vim.g.rakis_opts
+end
+
+--- Apply options to the colorscheme.
+--- @param opts Config
+function M.apply_options(opts)
+  -- Update the colorscheme
+  config.setup(opts)
+  vim.cmd("colorscheme rakis")
+end
+
+--- Used for toggling the theme variant when the variant is set to "auto". Uses the 'set background' command to toggle between 'light' and 'dark'.
+--- @return string new variant
+function M.toggle_theme_auto()
+  local variant = vim.o.background
+  if variant == "dark" then
+    variant = "light"
+  else
+    variant = "dark"
+  end
+  vim.cmd(":set background=" .. variant)
+  return variant == "dark" and "default" or "light"
+end
+
+--- Toggle the theme variant between "default" and "light".
+--- @return string new variant
+function M.toggle_theme_variant()
+  local opts = vim.g.rakis_opts
+  -- Handle the "auto" variant without overwriting the value in opts.
+  if opts.theme.variant == "auto" then
+    return M.toggle_theme_auto()
+  end
+
+  opts.theme.variant = opts.theme.variant == "default" and "light" or "default"
+  M.set_options(opts)
+  M.apply_options(opts)
+
+  return opts.theme.variant
+end
+
 return M
