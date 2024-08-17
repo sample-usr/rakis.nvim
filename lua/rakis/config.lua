@@ -1,4 +1,3 @@
-local default_colors = require("rakis.colors").default
 local M = {}
 
 ---@class RakisHighlight
@@ -67,8 +66,8 @@ local default_options = {
   cache = false,
 
   theme = {
-    variant = "default",
-    colors = default_colors,
+    variant = "auto",
+    colors = {},
     highlights = {},
   },
 
@@ -78,7 +77,7 @@ local default_options = {
     -- dashboard = true,
     -- fzflua = true,
     -- gitpad = true,
-    -- gitsigns = true,
+    gitsigns = true,
     -- grapple = true,
     -- grugfar = true,
     -- heirline = true,
@@ -96,7 +95,7 @@ local default_options = {
     -- notify = true,
     -- rainbow_delimiters = true,
     -- telescope = true,
-    -- treesitter = true,
+    treesitter = true,
     -- treesittercontext = true,
     -- trouble = true,
     -- whichkey = true,
