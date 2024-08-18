@@ -1,11 +1,5 @@
-local ts = require("rakis.treesitter")
 local config = require("rakis.config")
-
 local M = {}
-
-M.bg = "#f30303"
-M.fg = "#ffffff"
-M.day_brightness = 0.3
 
 ---@param c  string
 local function hexToRgb(c)
@@ -50,59 +44,6 @@ function M.invert_color(color)
   return color
 end
 
----@param group string
-function M.highlight(group, hl)
-  group = ts.get(group)
-  if not group then
-    return
-  end
-  if hl.style then
-    if type(hl.style) == "table" then
-      hl = vim.tbl_extend("force", hl, hl.style)
-    elseif hl.style:lower() ~= "none" then
-      -- handle old string style definitions
-      for s in string.gmatch(hl.style, "([^,]+)") do
-        hl[s] = true
-      end
-    end
-    hl.style = nil
-  end
-  vim.api.nvim_set_hl(0, group, hl)
-end
-
----@param config Config
-function M.autocmds(config)
-  local group = vim.api.nvim_create_augroup("rakis", { clear = true })
-
-  vim.api.nvim_create_autocmd("ColorSchemePre", {
-    group = group,
-    callback = function()
-      vim.api.nvim_del_augroup_by_id(group)
-    end,
-  })
-  local function set_whl()
-    local win = vim.api.nvim_get_current_win()
-    local whl = vim.split(vim.wo[win].winhighlight, ",")
-    vim.list_extend(whl, { "Normal:NormalSB", "SignColumn:SignColumnSB" })
-    whl = vim.tbl_filter(function(hl)
-      return hl ~= ""
-    end, whl)
-    vim.opt_local.winhighlight = table.concat(whl, ",")
-  end
-
-  vim.api.nvim_create_autocmd("FileType", {
-    group = group,
-    pattern = table.concat(config.sidebars, ","),
-    callback = set_whl,
-  })
-  if vim.tbl_contains(config.sidebars, "terminal") then
-    vim.api.nvim_create_autocmd("TermOpen", {
-      group = group,
-      callback = set_whl,
-    })
-  end
-end
-
 -- Simple string interpolation.
 --
 -- Example template: "${name} is ${value}"
@@ -119,41 +60,11 @@ end
 
 function M.syntax(syntax)
   for group, colors in pairs(syntax) do
-    M.highlight(group, colors)
+    vim.api.nvim_set_hl(0, group, colors)
   end
 end
 
----@param colors ColorScheme
-function M.terminal(colors)
-  -- dark
-  vim.g.terminal_color_0 = colors.black
-  vim.g.terminal_color_8 = colors.terminal_black
-
-  -- light
-  vim.g.terminal_color_7 = colors.fg_dark
-  vim.g.terminal_color_15 = colors.fg
-
-  -- colors
-  vim.g.terminal_color_1 = colors.red
-  vim.g.terminal_color_9 = colors.red
-
-  vim.g.terminal_color_2 = colors.green
-  vim.g.terminal_color_10 = colors.green
-
-  vim.g.terminal_color_3 = colors.yellow
-  vim.g.terminal_color_11 = colors.yellow
-
-  vim.g.terminal_color_4 = colors.blue
-  vim.g.terminal_color_12 = colors.blue
-
-  vim.g.terminal_color_5 = colors.magenta
-  vim.g.terminal_color_13 = colors.magenta
-
-  vim.g.terminal_color_6 = colors.cyan
-  vim.g.terminal_color_14 = colors.cyan
-end
-
----@param colors ColorScheme
+---@param colors RakisPalette
 function M.invert_colors(colors)
   if type(colors) == "string" then
     ---@diagnostic disable-next-line: return-type-mismatch
@@ -165,7 +76,7 @@ function M.invert_colors(colors)
   return colors
 end
 
----@param hls Highlights
+---@param hls RakisHighlight
 function M.invert_highlights(hls)
   for _, hl in pairs(hls) do
     if hl.fg then
@@ -190,26 +101,7 @@ function M.load(theme)
   vim.o.termguicolors = true
   vim.g.colors_name = "rakis"
 
-  if ts.new_style() then
-    for group, colors in pairs(ts.defaults) do
-      if not theme.highlights[group] then
-        M.highlight(group, colors)
-      end
-    end
-  end
-
   M.syntax(theme.highlights)
-
-  -- vim.api.nvim_set_hl_ns(M.ns)
-  -- if theme.opts.terminal_colors then
-  --   M.terminal(theme.colors)
-  -- end
-
-  -- M.autocmds(theme.config)
-  --
-  -- vim.defer_fn(function()
-  --   M.syntax(theme.defer)
-  -- end, 100)
 end
 
 --- Notify the user with a message.
