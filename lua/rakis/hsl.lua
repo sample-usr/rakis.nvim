@@ -1,5 +1,3 @@
--- https://github.com/EmmanuelOga/columns/blob/master/utils/color.lua
-
 local M = {}
 
 --- Converts an HSL color value to RGB. Conversion formula
