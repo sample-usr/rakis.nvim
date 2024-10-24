@@ -48,6 +48,7 @@ local M = {}
 ---@field treesittercontext? boolean
 ---@field trouble? boolean
 ---@field whichkey? boolean
+---@field nvim_notify? boolean
 
 ---@class Config
 ---@field transparent? boolean
@@ -72,9 +73,9 @@ local default_options = {
   },
 
   extensions = {
-    -- alpha = true,
-    -- cmp = true,
-    -- dashboard = true,
+    alpha = true,
+    cmp = true,
+    dashboard = true,
     -- fzflua = true,
     -- gitpad = true,
     gitsigns = true,
@@ -85,20 +86,21 @@ local default_options = {
     -- hop = true,
     -- indentblankline = true,
     -- kubectl = true,
-    -- lazy = true,
+    lazy = true,
     -- leap = true,
     -- markdown = true,
     -- markview = true,
-    -- mini = true,
+    mini = true,
     -- noice = true,
     -- neogit = true,
     -- notify = true,
     -- rainbow_delimiters = true,
-    -- telescope = true,
+    telescope = true,
     treesitter = true,
     -- treesittercontext = true,
-    -- trouble = true,
-    -- whichkey = true,
+    trouble = true,
+    whichkey = true,
+    nvim_notify = true,
   },
 }
 
