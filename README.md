@@ -1,5 +1,6 @@
 # rakis.nvim
-A cozy theme for late desert nigths or early mornings
+
+A cozy theme for late desert nights or early mornings
 
 <div align="center">
   dark
@@ -9,8 +10,9 @@ A cozy theme for late desert nigths or early mornings
 </div>
 
 ## Features
+
 - no pastel, high contrast for the most part
-- hmm, kinda nice looking
+- kinda nice looking
 - support for some plugins/tools (more on the way)
 
 <details>
@@ -30,12 +32,13 @@ A cozy theme for late desert nigths or early mornings
 </details>
 
 ## Supported extras
-These are the tools other than neovim that are supproted. You can find their respective theme in [extras](extras/). You can always submit a PR for any tool that is missing 💙
+
+Tools supported other than neovim. You can find their respective theme in [extras](extras/). You can always submit a PR for any tool that is missing 💙
+
 - [Fish](https://fishshell.com/docs/current/index.html)
 - [Lazygit](https://github.com/jesseduffield/lazygit)
 - [WezTerm](https://wezfurlong.org/wezterm/config/files.html)
 - [Zellij](https://zellij.dev/)
-
 
 ## Installation
 
@@ -57,6 +60,7 @@ use { "sample-usr/rakis.nvim" }
 ```
 
 ## Usage
+
 ```lua
 vim.cmd[[colorscheme rakis]]
 ```
@@ -66,11 +70,12 @@ colorscheme rakis
 ```
 
 You can set the `light` or `dark` mode using the vim background options
+
 ```lua
 vim.o.background = "dark"
 ```
 
-## Configuraiton
+## Configuration
 
 Below is an example of all the available configuration options with their default values:
 
@@ -132,6 +137,8 @@ require("rakis").setup({
 ```
 
 ### Credits
+
 Inspired by
+
 - [tokyonight](https://github.com/folke/tokyonight.nvim/)
 - [cyberdream](https://github.com/scottmckendry/cyberdream.nvim)
