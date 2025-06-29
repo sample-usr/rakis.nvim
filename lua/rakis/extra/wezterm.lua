@@ -22,8 +22,8 @@ return {
     scrollbar_thumb = "${bg}",
     split = "${bg}",
 
-    ansi = { "${bg}", "${red03}", "${green03}", "${yellow03}", "${blue03}", "${violet03}", "${cyan03}", "${fg}" },
-    brights = { "${bg_highlight}", "${red01}", "${green01}", "${yellow01}", "${blue01}", "${violet01}", "${cyan01}", "${fg}" },
+    ansi = { "${bg_secondary}", "${red03}", "${green03}", "${yellow03}", "${blue03}", "${violet03}", "${cyan03}", "${fg}" },
+    brights = { "${bg_secondary}", "${red01}", "${green01}", "${yellow01}", "${blue01}", "${violet01}", "${cyan01}", "${fg}" },
     indexed = { [16] = "${orange03}", [17] = "${red03}" },
 }
 ]==]
