@@ -32,7 +32,7 @@ function M.get(options, p)
     SignColumnSB = { fg = p.base02 }, -- column where |signs| are displayed
     Substitute = { fg = p.base03, bg = p.base01 }, -- |:substitute| replacement text highlighting
     LineNr = { fg = util.blend(p.bg_highlight, p.fg, 0.8) }, -- Line number for ":number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
-    CursorLineNr = { fg = p.orange01, sp = p.base01 }, -- Like LineNr when 'cursorline' or 'relativenumber' is set for the cursor line.
+    CursorLineNr = { fg = p.orange02, sp = p.base01, bold = true }, -- Like LineNr when 'cursorline' or 'relativenumber' is set for the cursor line - spice-bright
     MatchParen = { fg = p.magenta02, bg = p.bg_highlight, bold = true }, -- The character under the cursor or just before it, if it is a paired bracket, and its match. |pi_paren.txt|
     ModeMsg = { fg = p.fg }, -- 'showmode' message (e.g., "-- INSERT -- ")
     MsgArea = { fg = p.fg }, -- Area for messages and cmdline
@@ -50,9 +50,9 @@ function M.get(options, p)
     PmenuThumb = { fg = p.bg, bg = p.bg_highlight },
     Question = { fg = p.yellow03 },
     QuickFixLine = { bg = p.bg_highlight },
-    Search = { fg = p.bg_secondary, bg = p.fg },
-    IncSearch = { fg = p.bg_secondary, bg = p.cyan03 },
-    CurSearch = { fg = p.bg_secondary, bg = p.cyan03 },
+    Search = { fg = p.bg, bg = p.yellow02 }, -- search highlighting - spice glow
+    IncSearch = { fg = p.bg, bg = p.orange02 }, -- incremental search - desert sunset
+    CurSearch = { fg = p.bg, bg = p.orange02 }, -- current search - desert sunset
     SpecialKey = { fg = p.base01 },
     SpellBad = { sp = p.red03, undercurl = true },
     SpellCap = { sp = p.yellow03, undercurl = true },
@@ -66,8 +66,8 @@ function M.get(options, p)
     WinBar = { fg = p.base01, bg = p.bg },
     WinBarNC = { fg = p.base01, bg = p.bg },
     Title = { fg = p.fg },
-    Visual = { bg = p.bg_highlight },
-    VisualNOS = { bg = p.bg_highlight },
+    Visual = { bg = util.blend(p.bg_solid, p.blue02, 0.3) }, -- visual selection - desert sky
+    VisualNOS = { bg = util.blend(p.bg_solid, p.blue02, 0.3) }, -- visual selection when not owning the selection
     WarningMsg = { fg = p.yellow03 },
     Whitespace = { fg = p.base03 },
     WildMenu = { fg = p.bg, bg = p.blue03 },
