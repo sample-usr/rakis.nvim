@@ -1,19 +1,19 @@
 -- rakis theme for wezterm
 return {
-    foreground = "#ae8069",
-    background = "#f1ebba",
+    foreground = "#3d240f",
+    background = "#efede5",
 
-    cursor_bg = "#ae8069",
-    cursor_fg = "#f1ebba",
-    cursor_border = "#ae8069",
+    cursor_bg = "#3d240f",
+    cursor_fg = "#efede5",
+    cursor_border = "#3d240f",
 
-    selection_fg = "#ae8069",
-    selection_bg = "#f5e6b2",
+    selection_fg = "#3d240f",
+    selection_bg = "#e4dbcd",
 
-    scrollbar_thumb = "#f1ebba",
-    split = "#f1ebba",
+    scrollbar_thumb = "#efede5",
+    split = "#efede5",
 
-    ansi = { "#f1ebba", "#5f1610", "#304530", "#6c4c03", "#184c71", "#3c2e50", "#224e52", "#ae8069" },
-    brights = { "#f5e6b2", "#e83c30", "#5d895b", "#f2a50c", "#3386c1", "#694e91", "#3d888e", "#ae8069" },
-    indexed = { [16] = "#723502", [17] = "#5f1610" },
+    ansi = { "#efede5", "#75091b", "#184e0d", "#674708", "#0b4764", "#0e1c62", "#0c594c", "#3d240f" },
+    brights = { "#e4dbcd", "#c60505", "#0f890f", "#ae8304", "#0859a9", "#0d0da5", "#0c9696", "#3d240f" },
+    indexed = { [16] = "#791906", [17] = "#75091b" },
 }
