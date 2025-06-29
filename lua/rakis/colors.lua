@@ -44,7 +44,7 @@ local M = {}
 ---@field default RakisPalette
 M.default = {
   none = "NONE",
-  bg = hsl(18, 20, 4),
+  bg = hsl(18, 20, 6),
   bg_secondary = hsl(18, 20, 10),
   bg_highlight = hsl(12, 30, 17),
   fg = hsl(20, 30, 55),

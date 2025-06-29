@@ -1,6 +1,6 @@
 # name: 'rakis'
 # url: 'https://github.com/sample-usr/rakis.nvim'
-# preferred_background: 0c0908
+# preferred_background: 120e0c
 
 fish_color_normal ae8069
 fish_color_command 3d888e
