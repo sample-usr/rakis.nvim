@@ -39,6 +39,7 @@ local M = {}
 ---@field green01 string
 ---@field green02 string
 ---@field green03 string
+---@field terminal_fg_bright string
 
 ---@class RakisColors
 ---@field default RakisPalette
@@ -76,14 +77,15 @@ M.default = {
   green01 = hsl(118, 22, 70),
   green02 = hsl(117, 21, 55),
   green03 = hsl(118, 20, 45),
+  terminal_fg_bright = hsl(35, 18, 58),
 }
 
 ---@class RakisColors
 ---@field light RakisPalette
 M.light = {
-  bg = hsl(45, 25, 92),
-  bg_secondary = hsl(53, 68, 76),
-  bg_highlight = hsl(47, 77, 83),
+  bg = hsl(45, 67, 84),
+  bg_secondary = hsl(40, 38, 73),
+  bg_highlight = hsl(45, 88, 74),
   fg = hsl(20, 30, 55),
   base01 = hsl(46, 48, 62),
   base02 = hsl(46, 74, 72),
@@ -113,6 +115,7 @@ M.light = {
   green01 = hsl(118, 20, 45),
   green02 = hsl(118, 19, 36),
   green03 = hsl(118, 18, 23),
+  terminal_fg_bright = hsl(27, 10, 43),
 }
 
 return M

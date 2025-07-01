@@ -2,7 +2,6 @@ local colors = require("rakis.colors")
 local util = require("rakis.util")
 
 local M = {}
-
 --- Generate rakis theme for wezterm.
 --- @param variant string: Variation of the colorscheme to use.
 function M.generate(variant)
@@ -22,8 +21,8 @@ return {
     scrollbar_thumb = "${bg}",
     split = "${bg}",
 
-    ansi = { "${bg_secondary}", "${red03}", "${green03}", "${yellow03}", "${blue03}", "${violet03}", "${cyan03}", "${fg}" },
-    brights = { "${bg_secondary}", "${red01}", "${green01}", "${yellow01}", "${blue01}", "${violet01}", "${cyan01}", "${fg}" },
+    ansi = { "${bg}", "${red03}", "${green03}", "${yellow03}", "${blue03}", "${violet03}", "${cyan03}", "${fg}" },
+    brights = { "${terminal_fg_bright}", "${red01}", "${green01}", "${yellow01}", "${blue01}", "${violet01}", "${cyan01}", "${fg}" },
     indexed = { [16] = "${orange03}", [17] = "${red03}" },
 }
 ]==]

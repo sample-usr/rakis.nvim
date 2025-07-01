@@ -1,6 +1,6 @@
 # name: 'rakis'
 # url: 'https://github.com/sample-usr/rakis.nvim'
-# preferred_background: efede5
+# preferred_background: f1e3ba
 
 fish_color_normal ae8069
 fish_color_command 224e52
@@ -12,8 +12,8 @@ fish_color_end 3c2e50
 fish_color_comment ccb66f
 fish_color_error 5f1610
 fish_color_gray ccb66f
-fish_color_selection --background=f5e6b2
-fish_color_search_match --background=f5e6b2
+fish_color_selection --background=f7d982
+fish_color_search_match --background=f7d982
 fish_color_option 6c4c03
 fish_color_operator 184c71
 fish_color_escape 3c2e50
