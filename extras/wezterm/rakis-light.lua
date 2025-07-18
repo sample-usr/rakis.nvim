@@ -1,19 +1,19 @@
 -- rakis theme for wezterm
 return {
     foreground = "#262626",
-    background = "#fcf2d3",
+    background = "#f2e7ce",
 
     cursor_bg = "#262626",
-    cursor_fg = "#fcf2d3",
+    cursor_fg = "#f2e7ce",
     cursor_border = "#262626",
 
     selection_fg = "#262626",
-    selection_bg = "#f1e1bf",
+    selection_bg = "#dac4ae",
 
-    scrollbar_thumb = "#fcf2d3",
-    split = "#fcf2d3",
+    scrollbar_thumb = "#f2e7ce",
+    split = "#f2e7ce",
 
-    ansi = { "#fcf2d3", "#c10a0a", "#215209", "#a97408", "#3b0e80", "#3d0348", "#0e5071", "#262626" },
-    brights = { "#7a6651", "#ff3232", "#357c11", "#edac2a", "#611cc8", "#6a007f", "#208ec5", "#262626" },
-    indexed = { [16] = "#793f06", [17] = "#c10a0a" },
+    ansi = { "#f2e7ce", "#8c1616", "#3b543a", "#7a5a09", "#13317a", "#3d1f84", "#2c6376", "#262626" },
+    brights = { "#606060", "#c71818", "#418c3f", "#ba8707", "#1643b5", "#5927cd", "#30809b", "#262626" },
+    indexed = { [16] = "#933e1a", [17] = "#8c1616" },
 }

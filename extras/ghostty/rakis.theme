@@ -1,4 +1,4 @@
-# rakis theme for ghostty
+# rakis-${variant} theme for ghostty
 palette = 0=#120e0c
 palette = 1=#e83c30
 palette = 2=#5d895b

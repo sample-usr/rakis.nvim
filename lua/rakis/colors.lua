@@ -83,7 +83,7 @@ M.default = {
 ---@class RakisColors
 ---@field light RakisPalette
 M.light = {
-  bg = hsl(35, 58, 88),
+  bg = hsl(42, 58, 88),
   bg_secondary = hsl(30, 42, 82),
   bg_highlight = hsl(30, 38, 77),
   fg = hsl(0, 0, 15),

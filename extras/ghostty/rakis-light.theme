@@ -1,23 +1,23 @@
-# rakis theme for ghostty
-palette = 0=#fcf2d3
-palette = 1=#c10a0a
-palette = 2=#215209
-palette = 3=#a97408
-palette = 4=#3b0e80
-palette = 5=#782a58
-palette = 6=#0e5071
+# rakis-${variant} theme for ghostty
+palette = 0=#f2e7ce
+palette = 1=#8c1616
+palette = 2=#3b543a
+palette = 3=#7a5a09
+palette = 4=#13317a
+palette = 5=#652951
+palette = 6=#2c6376
 palette = 7=#262626
-palette = 8=#f1e1bf
-palette = 9=#ff3232
-palette = 10=#357c11
-palette = 11=#edac2a
-palette = 12=#611cc8
-palette = 13=#ae5a8b
-palette = 14=#208ec5
+palette = 8=#dac4ae
+palette = 9=#c71818
+palette = 10=#418c3f
+palette = 11=#ba8707
+palette = 12=#1643b5
+palette = 13=#963576
+palette = 14=#30809b
 palette = 15=#262626
 
-background = #fcf2d3
+background = #f2e7ce
 foreground = #262626
 cursor-color = #262626
-selection-background = #f1e1bf
+selection-background = #dac4ae
 selection-foreground = #262626
