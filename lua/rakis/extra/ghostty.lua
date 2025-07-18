@@ -17,7 +17,7 @@ palette = 4=${blue03}
 palette = 5=${magenta03}
 palette = 6=${cyan03}
 palette = 7=${fg}
-palette = 8=${bg_highlight}
+palette = 8=${terminal_fg_bright}
 palette = 9=${red01}
 palette = 10=${green01}
 palette = 11=${yellow01}

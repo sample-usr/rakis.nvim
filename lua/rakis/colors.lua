@@ -115,7 +115,7 @@ M.light = {
   green01 = hsl(118, 38, 40),
   green02 = hsl(118, 25, 34),
   green03 = hsl(118, 18, 28),
-  terminal_fg_bright = hsl(0, 0, 38),
+  terminal_fg_bright = hsl(30, 19, 61),
 }
 
 return M
