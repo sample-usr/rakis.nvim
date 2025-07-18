@@ -8,7 +8,7 @@ local M = {}
 function M.generate(variant)
   local t = colors[variant]
   local template = [==[
-# rakis theme for ghostty
+# rakis-${variant} theme for ghostty
 palette = 0=${bg}
 palette = 1=${red03}
 palette = 2=${green03}

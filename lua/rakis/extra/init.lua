@@ -10,6 +10,7 @@ M.extras = {
   lazygit = { extension = "yml", name = "lazygit" },
   wezterm = { extension = "lua", name = "wezterm" },
   zellij = { extension = "kdl", name = "zellij" },
+  ghostty = { extension = "theme", name = "ghostty" },
 }
 
 --- Create/overwrite a file in the extras directory.

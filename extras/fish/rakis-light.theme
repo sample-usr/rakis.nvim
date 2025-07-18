@@ -1,30 +1,30 @@
 # name: 'rakis'
 # url: 'https://github.com/sample-usr/rakis.nvim'
-# preferred_background: faf0c6
+# preferred_background: fcf2d3
 
-fish_color_normal ae8069
-fish_color_command 224e52
-fish_color_param 3c2e50
-fish_color_keyword 304530
-fish_color_quote 6c4c03
-fish_color_redirection 184c71
-fish_color_end 3c2e50
-fish_color_comment ccb66f
-fish_color_error 5f1610
-fish_color_gray ccb66f
-fish_color_selection --background=f7d982
-fish_color_search_match --background=f7d982
-fish_color_option 6c4c03
-fish_color_operator 184c71
-fish_color_escape 3c2e50
-fish_color_autosuggestion ccb66f
-fish_color_cancel 5f1610
-fish_color_cwd 723502
-fish_color_user 694e91
-fish_color_host 304530
-fish_color_host_remote 6c4c03
-fish_color_status 5f1610
-fish_pager_color_progress ccb66f
-fish_pager_color_prefix 184c71
-fish_pager_color_completion ae8069
-fish_pager_color_description ccb66f
+fish_color_normal 262626
+fish_color_command 0e5071
+fish_color_param 3d0348
+fish_color_keyword 215209
+fish_color_quote a97408
+fish_color_redirection 3b0e80
+fish_color_end 3d0348
+fish_color_comment 777777
+fish_color_error c10a0a
+fish_color_gray 777777
+fish_color_selection --background=f1e1bf
+fish_color_search_match --background=f1e1bf
+fish_color_option a97408
+fish_color_operator 3b0e80
+fish_color_escape 3d0348
+fish_color_autosuggestion 777777
+fish_color_cancel c10a0a
+fish_color_cwd 793f06
+fish_color_user 6a007f
+fish_color_host 215209
+fish_color_host_remote a97408
+fish_color_status c10a0a
+fish_pager_color_progress 777777
+fish_pager_color_prefix 3b0e80
+fish_pager_color_completion 262626
+fish_pager_color_description 777777
