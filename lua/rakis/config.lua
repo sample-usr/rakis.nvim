@@ -22,8 +22,12 @@ local M = {}
 
 ---@class extensions
 ---@field alpha? boolean
+---@field blink_cmp? boolean
 ---@field cmp? boolean
+---@field dap? boolean
 ---@field dashboard? boolean
+---@field flash? boolean
+---@field fugitive? boolean
 ---@field fzflua? boolean
 ---@field gitpad? boolean
 ---@field gitsigns? boolean
@@ -32,23 +36,32 @@ local M = {}
 ---@field heirline? boolean
 ---@field helpview? boolean
 ---@field hop? boolean
----@field indentblankline? boolean
+---@field illuminate? boolean
+---@field indent_blankline? boolean
 ---@field kubectl? boolean
 ---@field lazy? boolean
+---@field lazygit? boolean
 ---@field leap? boolean
+---@field lsp? boolean
+---@field lsp_lines? boolean
 ---@field markdown? boolean
 ---@field markview? boolean
 ---@field mini? boolean
 ---@field neogit? boolean
+---@field neotree? boolean
 ---@field noice? boolean
 ---@field notify? boolean
+---@field nvim_lint? boolean
+---@field nvim_notify? boolean
+---@field nvim_tree? boolean
 ---@field rainbow_delimiters? boolean
+---@field render_markdown? boolean
+---@field snacks? boolean
 ---@field telescope? boolean
 ---@field treesitter? boolean
----@field treesittercontext? boolean
+---@field treesitter_context? boolean
 ---@field trouble? boolean
 ---@field whichkey? boolean
----@field nvim_notify? boolean
 
 ---@class Config
 ---@field transparent? boolean
@@ -74,8 +87,12 @@ local default_options = {
 
   extensions = {
     alpha = true,
+    -- blink_cmp = true,
     cmp = true,
+    -- dap = true,
     dashboard = true,
+    -- flash = true,
+    fugitive = true,
     -- fzflua = true,
     -- gitpad = true,
     gitsigns = true,
@@ -84,23 +101,32 @@ local default_options = {
     -- heirline = true,
     -- helpview = true,
     -- hop = true,
-    -- indentblankline = true,
+    -- illuminate = true,
+    -- indent_blankline = true,
     -- kubectl = true,
     lazy = true,
+    lazygit = true,
     -- leap = true,
+    lsp = true,
+    lsp_lines = true,
     -- markdown = true,
     -- markview = true,
     mini = true,
+    neogit = true,
+    -- neotree = true,
     -- noice = true,
-    -- neogit = true,
     -- notify = true,
+    nvim_lint = true,
+    nvim_notify = true,
+    nvim_tree = true,
     -- rainbow_delimiters = true,
+    -- render_markdown = true,
+    snacks = true,
     -- telescope = true,
     treesitter = true,
-    -- treesittercontext = true,
+    -- treesitter_context = true,
     trouble = true,
     whichkey = true,
-    nvim_notify = true,
   },
 }
 
