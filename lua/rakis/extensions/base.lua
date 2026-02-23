@@ -48,6 +48,10 @@ function M.get(options, p)
     PmenuSel = { fg = p.fg, bg = p.bg_highlight },
     PmenuSbar = { fg = p.bg, bg = p.bg_highlight },
     PmenuThumb = { fg = p.bg, bg = p.bg_highlight },
+    PmenuKind = { fg = p.cyan03, bg = p.bg },
+    PmenuKindSel = { fg = p.cyan03, bg = p.bg_highlight },
+    PmenuExtra = { fg = p.base01, bg = p.bg },
+    PmenuExtraSel = { fg = p.base01, bg = p.bg_highlight },
     Question = { fg = p.yellow03 },
     QuickFixLine = { bg = p.bg_highlight },
     Search = { fg = p.bg_secondary, bg = p.fg },
@@ -124,22 +128,53 @@ function M.get(options, p)
     DiagnosticWarn = { fg = p.yellow02 },
     DiagnosticInfo = { fg = p.blue02 },
     DiagnosticHint = { fg = p.cyan02 },
+    DiagnosticOk = { fg = p.green02 },
     DiagnosticUnnecessary = { fg = p.base01 },
 
-    DiagnosiiucVirtualTextError = { fg = p.red02 },
-    DiagnosticVirtualTextWarn = { fg = p.yellow02 },
-    DiagnosticVirtualTextInfo = { fg = p.blue02 },
-    DiagnosticVirtualTextHint = { fg = p.cyan02 },
+    DiagnosticDefaultError = { link = "DiagnosticError" },
+    DiagnosticDefaultWarn = { link = "DiagnosticWarn" },
+    DiagnosticDefaultInfo = { link = "DiagnosticInfo" },
+    DiagnosticDefaultHint = { link = "DiagnosticHint" },
+    DiagnosticDefaultOk = { link = "DiagnosticOk" },
+
+    DiagnosticFloatingError = { link = "DiagnosticError" },
+    DiagnosticFloatingWarn = { link = "DiagnosticWarn" },
+    DiagnosticFloatingInfo = { link = "DiagnosticInfo" },
+    DiagnosticFloatingHint = { link = "DiagnosticHint" },
+    DiagnosticFloatingOk = { link = "DiagnosticOk" },
+
+    DiagnosticSignError = { link = "DiagnosticError" },
+    DiagnosticSignWarn = { link = "DiagnosticWarn" },
+    DiagnosticSignInfo = { link = "DiagnosticInfo" },
+    DiagnosticSignHint = { link = "DiagnosticHint" },
+    DiagnosticSignOk = { link = "DiagnosticOk" },
+
+    DiagnosticVirtualTextError = { fg = p.red02, bg = util.blend(p.bg_solid, p.red02, 0.9) },
+    DiagnosticVirtualTextWarn = { fg = p.yellow02, bg = util.blend(p.bg_solid, p.yellow02, 0.9) },
+    DiagnosticVirtualTextInfo = { fg = p.blue02, bg = util.blend(p.bg_solid, p.blue02, 0.9) },
+    DiagnosticVirtualTextHint = { fg = p.cyan02, bg = util.blend(p.bg_solid, p.cyan02, 0.9) },
+    DiagnosticVirtualTextOk = { fg = p.green02, bg = util.blend(p.bg_solid, p.green02, 0.9) },
 
     DiagnosticUnderlineError = { undercurl = true, sp = p.red02 },
     DiagnosticUnderlineWarn = { undercurl = true, sp = p.yellow02 },
     DiagnosticUnderlineInfo = { undercurl = true, sp = p.blue02 },
     DiagnosticUnderlineHint = { undercurl = true, sp = p.cyan02 },
+    DiagnosticUnderlineOk = { undercurl = true, sp = p.green02 },
 
     LspSignatureActiveParameter = { fg = p.orange03 },
     LspCodeLens = { fg = p.base02 },
-    LspInlayHint = { fg = p.base01 },
+    LspInlayHint = { fg = p.base01, bg = util.blend(p.bg_solid, p.base01, 0.9) },
     LspInfoBorder = { fg = p.bg },
+
+    -- Health check
+    healthError = { fg = p.red02 },
+    healthSuccess = { fg = p.green02 },
+    healthWarning = { fg = p.yellow02 },
+
+    -- Diff links
+    diffAdded = { link = "DiffAdd" },
+    diffChanged = { link = "DiffChange" },
+    diffRemoved = { link = "DiffDelete" },
   }
 
   return highlights
