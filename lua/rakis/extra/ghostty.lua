@@ -29,6 +29,7 @@ palette = 15=${fg}
 background = ${bg}
 foreground = ${fg}
 cursor-color = ${fg}
+cursor-text = ${bg}
 selection-background = ${bg_highlight}
 selection-foreground = ${fg}
 ]==]
