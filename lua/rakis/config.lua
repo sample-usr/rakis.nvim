@@ -21,18 +21,24 @@ local M = {}
 ---@alias RakisTelescopeStyle "nvchad" | "flat"
 
 ---@class extensions
+---@field aerial? boolean
 ---@field alpha? boolean
+---@field avante? boolean
+---@field barbar? boolean
 ---@field blink_cmp? boolean
+---@field bufferline? boolean
 ---@field cmp? boolean
+---@field copilot? boolean
 ---@field dap? boolean
 ---@field dashboard? boolean
+---@field diffview? boolean
 ---@field flash? boolean
 ---@field fugitive? boolean
----@field fzflua? boolean
+---@field fzf_lua? boolean
 ---@field gitpad? boolean
 ---@field gitsigns? boolean
 ---@field grapple? boolean
----@field grugfar? boolean
+---@field grug_far? boolean
 ---@field heirline? boolean
 ---@field helpview? boolean
 ---@field hop? boolean
@@ -44,10 +50,12 @@ local M = {}
 ---@field leap? boolean
 ---@field lsp? boolean
 ---@field lsp_lines? boolean
+---@field lualine? boolean
 ---@field markdown? boolean
 ---@field markview? boolean
 ---@field mini? boolean
 ---@field neogit? boolean
+---@field neotest? boolean
 ---@field neotree? boolean
 ---@field noice? boolean
 ---@field notify? boolean
@@ -58,6 +66,7 @@ local M = {}
 ---@field render_markdown? boolean
 ---@field snacks? boolean
 ---@field telescope? boolean
+---@field toggleterm? boolean
 ---@field treesitter? boolean
 ---@field treesitter_context? boolean
 ---@field trouble? boolean
@@ -86,18 +95,24 @@ local default_options = {
   },
 
   extensions = {
+    -- aerial = true,
     alpha = true,
+    -- avante = true,
+    -- barbar = true,
     -- blink_cmp = true,
+    -- bufferline = true,
     cmp = true,
+    -- copilot = true,
     -- dap = true,
     dashboard = true,
+    -- diffview = true,
     -- flash = true,
     fugitive = true,
-    -- fzflua = true,
+    -- fzf_lua = true,
     -- gitpad = true,
     gitsigns = true,
     -- grapple = true,
-    -- grugfar = true,
+    -- grug_far = true,
     -- heirline = true,
     -- helpview = true,
     -- hop = true,
@@ -109,10 +124,12 @@ local default_options = {
     -- leap = true,
     lsp = true,
     lsp_lines = true,
+    -- lualine = true,
     -- markdown = true,
     -- markview = true,
     mini = true,
     neogit = true,
+    -- neotest = true,
     -- neotree = true,
     -- noice = true,
     -- notify = true,
@@ -123,6 +140,7 @@ local default_options = {
     -- render_markdown = true,
     snacks = true,
     -- telescope = true,
+    -- toggleterm = true,
     treesitter = true,
     -- treesitter_context = true,
     trouble = true,
