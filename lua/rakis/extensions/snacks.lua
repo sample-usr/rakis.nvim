@@ -14,7 +14,7 @@ function M.get(opts, p)
     SnacksIndentScope = { fg = p.cyan03 },
 
     -- Picker (telescope-like)
-    SnacksPickerMatch = { fg = p.cyan03, bold = true },
+    SnacksPickerMatch = { fg = p.orange02, bold = true },
     SnacksPickerDir = { fg = p.blue03 },
     SnacksPickerFile = { fg = p.fg },
     SnacksPickerIcon = { fg = p.cyan03 },
