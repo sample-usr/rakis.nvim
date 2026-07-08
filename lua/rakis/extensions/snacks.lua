@@ -13,10 +13,20 @@ function M.get(opts, p)
     SnacksIndentBlank = { fg = p.highlight },
     SnacksIndentScope = { fg = p.water },
 
+    -- Snacks window chrome (layout box, titles, separators). These back all
+    -- snacks windows, including the picker's container box.
+    SnacksNormal = { fg = p.text, bg = p.surface },
+    SnacksNormalNC = { fg = p.text, bg = p.surface },
+    SnacksTitle = { fg = p.spice, bg = p.surface, bold = true },
+    SnacksFooter = { fg = p.subtle, bg = p.surface },
+    SnacksWinSeparator = { fg = p.highlight, bg = p.surface },
+
     -- Picker (telescope-like)
-    -- All picker windows (input, list, preview) share one background so the
-    -- preview pane doesn't stand out from the rest of the picker.
+    -- All picker windows (box, input, list, preview) share one background so
+    -- the preview pane doesn't stand out from the rest of the picker.
     SnacksPicker = { fg = p.text, bg = p.surface },
+    SnacksPickerBox = { fg = p.text, bg = p.surface },
+    SnacksPickerBoxBorder = { fg = p.highlight, bg = p.surface },
     SnacksPickerInput = { fg = p.text, bg = p.surface },
     SnacksPickerList = { fg = p.text, bg = p.surface },
     SnacksPickerPreview = { fg = p.text, bg = p.surface },
