@@ -14,12 +14,27 @@ function M.get(opts, p)
     SnacksIndentScope = { fg = p.water },
 
     -- Picker (telescope-like)
+    -- All picker windows (input, list, preview) share one background so the
+    -- preview pane doesn't stand out from the rest of the picker.
+    SnacksPicker = { fg = p.text, bg = p.surface },
+    SnacksPickerInput = { fg = p.text, bg = p.surface },
+    SnacksPickerList = { fg = p.text, bg = p.surface },
+    SnacksPickerPreview = { fg = p.text, bg = p.surface },
     SnacksPickerMatch = { fg = p.spice, bold = true },
     SnacksPickerDir = { fg = p.ibad },
     SnacksPickerFile = { fg = p.text },
     SnacksPickerIcon = { fg = p.water },
     SnacksPickerTitle = { fg = p.water, bold = true },
-    SnacksPickerBorder = { fg = p.highlight, bg = p.bg },
+    SnacksPickerBorder = { fg = p.highlight, bg = p.surface },
+    SnacksPickerInputBorder = { fg = p.highlight, bg = p.surface },
+    SnacksPickerListBorder = { fg = p.highlight, bg = p.surface },
+    SnacksPickerPreviewBorder = { fg = p.highlight, bg = p.surface },
+    SnacksPickerInputTitle = { fg = p.water, bold = true },
+    SnacksPickerListTitle = { fg = p.water, bold = true },
+    SnacksPickerPreviewTitle = { fg = p.water, bold = true },
+    SnacksPickerCursorLine = { bg = p.overlay },
+    SnacksPickerListCursorLine = { bg = p.overlay },
+    SnacksPickerPreviewCursorLine = { bg = p.overlay },
 
     -- Dashboard
     SnacksDashboardHeader = { fg = p.ibad },
