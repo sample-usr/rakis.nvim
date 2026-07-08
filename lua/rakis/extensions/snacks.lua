@@ -15,30 +15,31 @@ function M.get(opts, p)
 
     -- Snacks window chrome (layout box, titles, separators). These back all
     -- snacks windows, including the picker's container box.
-    SnacksNormal = { fg = p.text, bg = p.surface },
-    SnacksNormalNC = { fg = p.text, bg = p.surface },
-    SnacksTitle = { fg = p.spice, bg = p.surface, bold = true },
-    SnacksFooter = { fg = p.subtle, bg = p.surface },
-    SnacksWinSeparator = { fg = p.highlight, bg = p.surface },
+    SnacksNormal = { fg = p.text, bg = p.bg },
+    SnacksNormalNC = { fg = p.text, bg = p.bg },
+    SnacksTitle = { fg = p.spice, bg = p.bg, bold = true },
+    SnacksFooter = { fg = p.subtle, bg = p.bg },
+    SnacksWinSeparator = { fg = p.highlight, bg = p.bg },
 
     -- Picker (telescope-like)
-    -- All picker windows (box, input, list, preview) share one background so
-    -- the preview pane doesn't stand out from the rest of the picker.
-    SnacksPicker = { fg = p.text, bg = p.surface },
-    SnacksPickerBox = { fg = p.text, bg = p.surface },
-    SnacksPickerBoxBorder = { fg = p.highlight, bg = p.surface },
-    SnacksPickerInput = { fg = p.text, bg = p.surface },
-    SnacksPickerList = { fg = p.text, bg = p.surface },
-    SnacksPickerPreview = { fg = p.text, bg = p.surface },
+    -- All picker windows (box, input, list, preview) share the editor
+    -- background so opening the picker doesn't shift the screen; panels
+    -- separate via their borders only.
+    SnacksPicker = { fg = p.text, bg = p.bg },
+    SnacksPickerBox = { fg = p.text, bg = p.bg },
+    SnacksPickerBoxBorder = { fg = p.highlight, bg = p.bg },
+    SnacksPickerInput = { fg = p.text, bg = p.bg },
+    SnacksPickerList = { fg = p.text, bg = p.bg },
+    SnacksPickerPreview = { fg = p.text, bg = p.bg },
     SnacksPickerMatch = { fg = p.spice, bold = true },
     SnacksPickerDir = { fg = p.ibad },
     SnacksPickerFile = { fg = p.text },
     SnacksPickerIcon = { fg = p.water },
     SnacksPickerTitle = { fg = p.water, bold = true },
-    SnacksPickerBorder = { fg = p.highlight, bg = p.surface },
-    SnacksPickerInputBorder = { fg = p.highlight, bg = p.surface },
-    SnacksPickerListBorder = { fg = p.highlight, bg = p.surface },
-    SnacksPickerPreviewBorder = { fg = p.highlight, bg = p.surface },
+    SnacksPickerBorder = { fg = p.highlight, bg = p.bg },
+    SnacksPickerInputBorder = { fg = p.highlight, bg = p.bg },
+    SnacksPickerListBorder = { fg = p.highlight, bg = p.bg },
+    SnacksPickerPreviewBorder = { fg = p.highlight, bg = p.bg },
     SnacksPickerInputTitle = { fg = p.water, bold = true },
     SnacksPickerListTitle = { fg = p.water, bold = true },
     SnacksPickerPreviewTitle = { fg = p.water, bold = true },
