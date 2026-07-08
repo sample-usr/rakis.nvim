@@ -1,0 +1,5 @@
+# rakis-default Slack theme
+# Paste the string below into Slack's "Import theme" dialog
+# (Preferences > Sidebar > Customize your theme > Import theme)
+
+#100c0a,#f96f1f,#d56d98,#e25054

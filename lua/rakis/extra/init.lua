@@ -11,6 +11,7 @@ M.extras = {
   wezterm = { extension = "lua", name = "wezterm" },
   zellij = { extension = "kdl", name = "zellij" },
   ghostty = { extension = "theme", name = "ghostty" },
+  slack = { extension = "txt", name = "slack" },
 }
 
 --- Create/overwrite a file in the extras directory.
