@@ -6,12 +6,17 @@ M.variants = {
 }
 
 M.extras = {
+  alacritty = { extension = "toml", name = "alacritty" },
+  delta = { extension = "gitconfig", name = "delta" },
   fish = { extension = "theme", name = "fish" },
+  fzf = { extension = "sh", name = "fzf" },
+  ghostty = { extension = "theme", name = "ghostty" },
+  kitty = { extension = "conf", name = "kitty" },
   lazygit = { extension = "yml", name = "lazygit" },
+  slack = { extension = "txt", name = "slack" },
+  tmux = { extension = "conf", name = "tmux" },
   wezterm = { extension = "lua", name = "wezterm" },
   zellij = { extension = "kdl", name = "zellij" },
-  ghostty = { extension = "theme", name = "ghostty" },
-  slack = { extension = "txt", name = "slack" },
 }
 
 --- Create/overwrite a file in the extras directory.

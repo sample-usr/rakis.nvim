@@ -35,8 +35,15 @@ A cozy theme for late desert nights or early mornings
 
 Tools supported other than neovim. You can find their respective theme in [extras](extras/). You can always submit a PR for any tool that is missing 💙
 
+- [Alacritty](https://alacritty.org/)
+- [Delta](https://github.com/dandavison/delta)
 - [Fish](https://fishshell.com/docs/current/index.html)
+- [fzf](https://github.com/junegunn/fzf)
+- [Ghostty](https://ghostty.org/)
+- [kitty](https://sw.kovidgoyal.net/kitty/)
 - [Lazygit](https://github.com/jesseduffield/lazygit)
+- [Slack](https://slack.com/)
+- [tmux](https://github.com/tmux/tmux)
 - [WezTerm](https://wezfurlong.org/wezterm/config/files.html)
 - [Zellij](https://zellij.dev/)
 
@@ -73,6 +80,13 @@ You can set the `light` or `dark` mode using the vim background options
 
 ```lua
 vim.o.background = "dark"
+```
+
+Or load a specific variant directly, regardless of `background`:
+
+```vim
+colorscheme rakis-dark
+colorscheme rakis-light
 ```
 
 ## Palette

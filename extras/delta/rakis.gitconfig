@@ -1,0 +1,24 @@
+# rakis-default theme for delta
+# Include in your ~/.gitconfig:
+#   [include]
+#       path = path/to/rakis.gitconfig
+#   [delta]
+#       features = rakis-default
+[delta "rakis-default"]
+    dark = true
+    line-numbers = true
+    hunk-header-style = file line-number syntax
+    hunk-header-decoration-style = "#2d201b" box
+    file-style = "#f96f1f" bold
+    file-decoration-style = "#2d201b" ul
+    line-numbers-left-style = "#756157"
+    line-numbers-right-style = "#756157"
+    line-numbers-minus-style = "#e25054"
+    line-numbers-plus-style = "#84bc5c"
+    line-numbers-zero-style = "#756157"
+    minus-style = syntax "#3a1a19"
+    minus-emph-style = syntax "#5a2424"
+    plus-style = syntax "#272f1a"
+    plus-emph-style = syntax "#394a27"
+    zero-style = syntax
+    whitespace-error-style = "#e25054" reverse

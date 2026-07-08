@@ -1,0 +1,40 @@
+# rakis-light theme for alacritty
+[colors.primary]
+background = "#f2e7cf"
+foreground = "#4c3424"
+
+[colors.cursor]
+text = "#f2e7cf"
+cursor = "#4c3424"
+
+[colors.selection]
+text = "#4c3424"
+background = "#d2baa2"
+
+[colors.search.matches]
+foreground = "#f2e7cf"
+background = "#6e5749"
+
+[colors.search.focused_match]
+foreground = "#f2e7cf"
+background = "#8b5e04"
+
+[colors.normal]
+black = "#f2e7cf"
+red = "#aa181d"
+green = "#416b24"
+yellow = "#8b5e04"
+blue = "#1c589c"
+magenta = "#6236a1"
+cyan = "#166961"
+white = "#4c3424"
+
+[colors.bright]
+black = "#837167"
+red = "#bf5256"
+green = "#71905b"
+yellow = "#a88643"
+blue = "#5582b5"
+magenta = "#8968b9"
+cyan = "#508f89"
+white = "#79675b"
