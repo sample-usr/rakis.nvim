@@ -20,9 +20,9 @@ function M.get(opts, p)
     fugitiveUnstagedHeading = { fg = p.glowglobe, bold = true },
     fugitiveUnstagedModifier = { fg = p.glowglobe },
     fugitiveUnstagedSection = { fg = p.glowglobe },
-    fugitiveUntrackedHeading = { fg = p.blood, bold = true },
-    fugitiveUntrackedModifier = { fg = p.blood },
-    fugitiveUntrackedSection = { fg = p.blood },
+    fugitiveUntrackedHeading = { fg = p.water, bold = true },
+    fugitiveUntrackedModifier = { fg = p.water },
+    fugitiveUntrackedSection = { fg = p.water },
 
     -- Symbols
     fugitiveSymbolicRef = { fg = p.dusk },

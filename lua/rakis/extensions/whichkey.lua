@@ -8,10 +8,10 @@ function M.get(options, p)
   local highlights = {
     WhichKey = { fg = p.water },
     WhichKeyGroup = { fg = p.dusk },
-    WhichKeyDesc = { fg = p.dusk },
-    WhichKeySeperator = { fg = p.bg },
-    WhichKeyFloat = { bg = p.bg },
-    WhichKeyValue = { fg = p.dusk },
+    WhichKeyDesc = { fg = p.text },
+    WhichKeySeperator = { fg = p.muted },
+    WhichKeyFloat = { bg = p.surface },
+    WhichKeyValue = { fg = p.subtle },
   }
 
   return highlights

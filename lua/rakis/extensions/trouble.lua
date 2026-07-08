@@ -6,16 +6,16 @@ local M = {}
 function M.get(options, p)
   options = options or {}
   local highlights = {
-    TroubleCode = { fg = p.bloom },
-    TroubleCount = { bg = p.highlight, bold = true },
-    TroubleDirectory = { fg = p.muted, bold = true },
+    TroubleCode = { fg = p.water },
+    TroubleCount = { bg = p.overlay, bold = true },
+    TroubleDirectory = { fg = p.subtle, bold = true },
     TroubleFilename = { fg = p.water },
     TroubleIconArray = { fg = p.dusk },
     TroubleIconBoolean = { link = "Boolean" },
     TroubleIconConstant = { link = "Constant" },
-    TroubleIconDirectory = { fg = p.dusk },
+    TroubleIconDirectory = { fg = p.ibad },
     TroubleIconEvent = { link = "Special" },
-    TroubleIconField = { link = "Boolean" },
+    TroubleIconField = { link = "@variable.member" },
     TroubleIconFile = { link = "Normal" },
     TroubleIconFunction = { link = "@function" },
     TroubleIndent = { link = "LineNr" },

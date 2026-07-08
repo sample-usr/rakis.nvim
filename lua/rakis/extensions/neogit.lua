@@ -14,11 +14,11 @@ function M.get(opts, p)
     NeogitDiffDelete = { fg = p.blood, bg = util.blend(p.bg_solid, p.blood, 0.8) },
     NeogitDiffDeleteHighlight = { link = "NeogitDiffDelete" },
     NeogitDiffContext = { fg = p.text, bg = p.bg },
-    NeogitDiffContextHighlight = { bg = p.highlight },
+    NeogitDiffContextHighlight = { bg = p.overlay },
 
     -- Hunk
-    NeogitHunkHeader = { fg = p.water, bg = p.highlight, bold = true },
-    NeogitHunkHeaderHighlight = { fg = p.water, bg = p.highlight, bold = true },
+    NeogitHunkHeader = { fg = p.water, bg = p.overlay, bold = true },
+    NeogitHunkHeaderHighlight = { fg = p.water, bg = p.overlay, bold = true },
 
     -- Changes
     NeogitChangeAdded = { fg = p.oasis, bold = true, italic = opts.italic_comments },
@@ -39,7 +39,7 @@ function M.get(opts, p)
     NeogitRecentcommits = { fg = p.water, bold = true },
 
     -- Commit
-    NeogitCommitViewHeader = { fg = p.water, bg = p.highlight, bold = true },
+    NeogitCommitViewHeader = { fg = p.water, bg = p.overlay, bold = true },
     NeogitFilePath = { fg = p.ibad, italic = opts.italic_comments },
 
     -- Branch
@@ -47,7 +47,7 @@ function M.get(opts, p)
     NeogitRemote = { fg = p.spice, bold = true },
 
     -- Misc
-    NeogitCursorLine = { bg = p.highlight },
+    NeogitCursorLine = { bg = p.overlay },
     NeogitFold = { fg = p.subtle },
     NeogitPopupActionKey = { fg = p.spice },
     NeogitPopupActionDisabled = { fg = p.subtle },

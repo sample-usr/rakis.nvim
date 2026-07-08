@@ -17,7 +17,7 @@ function M.get(opts, p)
     NeoTreeGitUntracked = { fg = p.water },
 
     -- Tabs
-    NeoTreeTabActive = { fg = p.text, bg = p.highlight },
+    NeoTreeTabActive = { fg = p.text, bg = p.overlay },
     NeoTreeTabInactive = { fg = p.subtle, bg = p.bg },
     NeoTreeTabSeparatorActive = { link = "WinSeparator" },
     NeoTreeTabSeparatorInactive = { link = "WinSeparator" },
@@ -31,14 +31,14 @@ function M.get(opts, p)
     NeoTreeFileName = { fg = p.text },
     NeoTreeFileIcon = { fg = p.text },
     NeoTreeFileNameOpened = { fg = p.water },
-    NeoTreeIndentMarker = { fg = p.highlight },
+    NeoTreeIndentMarker = { fg = p.faint },
     NeoTreeExpander = { fg = p.subtle },
     NeoTreeRootName = { fg = p.water, bold = true },
     NeoTreeSymbolicLinkTarget = { fg = p.dusk },
 
     -- Floating window
-    NeoTreeFloatBorder = { fg = p.highlight, bg = p.bg },
-    NeoTreeFloatTitle = { fg = p.water, bg = p.bg },
+    NeoTreeFloatBorder = { fg = p.highlight, bg = p.surface },
+    NeoTreeFloatTitle = { fg = p.spice, bg = p.surface },
 
     -- Window picker
     NeoTreeWindowsHidden = { fg = p.subtle },

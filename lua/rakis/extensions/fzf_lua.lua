@@ -17,8 +17,8 @@ function M.get(opts, p)
 
     -- Cursor
     FzfLuaCursor = { fg = p.bg, bg = p.text },
-    FzfLuaCursorLine = { fg = p.text, bg = p.highlight },
-    FzfLuaCursorLineNr = { fg = p.spice, bg = p.highlight },
+    FzfLuaCursorLine = { fg = p.text, bg = p.overlay },
+    FzfLuaCursorLineNr = { fg = p.spice, bg = p.overlay },
 
     -- Search
     FzfLuaSearch = { fg = p.glowglobe, bg = p.bg },

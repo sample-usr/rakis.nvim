@@ -8,15 +8,15 @@ function M.get(opts, p)
   opts = opts or {}
   local highlights = {
     -- Current buffer
-    BufferCurrent = { fg = p.text, bg = p.highlight },
-    BufferCurrentIndex = { fg = p.text, bg = p.highlight },
-    BufferCurrentMod = { fg = p.water, bg = p.highlight },
-    BufferCurrentSign = { fg = p.subtle, bg = p.highlight },
-    BufferCurrentTarget = { fg = p.glowglobe, bg = p.highlight },
-    BufferCurrentIcon = { bg = p.highlight },
+    BufferCurrent = { fg = p.text, bg = p.overlay },
+    BufferCurrentIndex = { fg = p.text, bg = p.overlay },
+    BufferCurrentMod = { fg = p.water, bg = p.overlay },
+    BufferCurrentSign = { fg = p.subtle, bg = p.overlay },
+    BufferCurrentTarget = { fg = p.glowglobe, bg = p.overlay },
+    BufferCurrentIcon = { bg = p.overlay },
 
     -- Visible buffers
-    BufferVisible = { fg = p.subtle, bg = p.bg },
+    BufferVisible = { fg = p.text, bg = p.bg },
     BufferVisibleIndex = { fg = p.subtle, bg = p.bg },
     BufferVisibleMod = { fg = p.water, bg = p.bg },
     BufferVisibleSign = { fg = p.muted, bg = p.bg },

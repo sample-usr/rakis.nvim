@@ -9,21 +9,21 @@ function M.get(opts, p)
   opts = opts or {}
   local highlights = {
     -- Headings with backgrounds
-    RenderMarkdownH1Bg = { bg = util.blend(p.bg_solid, p.ibad, 0.8) },
-    RenderMarkdownH2Bg = { bg = util.blend(p.bg_solid, p.water, 0.8) },
-    RenderMarkdownH3Bg = { bg = util.blend(p.bg_solid, p.ibad, 0.8) },
-    RenderMarkdownH4Bg = { bg = util.blend(p.bg_solid, p.dusk, 0.8) },
-    RenderMarkdownH5Bg = { bg = util.blend(p.bg_solid, p.dusk, 0.8) },
-    RenderMarkdownH6Bg = { bg = util.blend(p.bg_solid, p.oasis, 0.8) },
+    RenderMarkdownH1Bg = { bg = util.blend(p.bg_solid, p.spice, 0.8) },
+    RenderMarkdownH2Bg = { bg = util.blend(p.bg_solid, p.glowglobe, 0.8) },
+    RenderMarkdownH3Bg = { bg = util.blend(p.bg_solid, p.oasis, 0.8) },
+    RenderMarkdownH4Bg = { bg = util.blend(p.bg_solid, p.water, 0.8) },
+    RenderMarkdownH5Bg = { bg = util.blend(p.bg_solid, p.ibad, 0.8) },
+    RenderMarkdownH6Bg = { bg = util.blend(p.bg_solid, p.dusk, 0.8) },
 
     -- Code blocks
-    RenderMarkdownCode = { bg = p.highlight },
-    RenderMarkdownCodeInline = { fg = p.water, bg = p.highlight },
+    RenderMarkdownCode = { bg = p.surface },
+    RenderMarkdownCodeInline = { fg = p.water, bg = p.overlay },
 
     -- Lists
     RenderMarkdownBullet = { fg = p.spice },
     RenderMarkdownChecked = { fg = p.oasis, bold = true },
-    RenderMarkdownUnchecked = { fg = p.bloom, bold = true },
+    RenderMarkdownUnchecked = { fg = p.muted, bold = true },
 
     -- Quotes and separators
     RenderMarkdownQuote = { fg = p.subtle, italic = true },

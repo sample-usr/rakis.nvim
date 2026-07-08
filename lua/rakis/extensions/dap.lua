@@ -16,8 +16,8 @@ function M.get(opts, p)
 
     -- UI elements
     DapUIDecoration = { link = "DapUIBreakpointsPath" },
-    DapUIFloatBorder = { fg = p.highlight, bg = p.bg },
-    DapUIFloatNormal = { bg = p.bg },
+    DapUIFloatBorder = { fg = p.highlight, bg = p.surface },
+    DapUIFloatNormal = { bg = p.surface },
     DapUIFrameName = { fg = p.text },
     DapUILineNumber = { link = "DapUIBreakpointsPath" },
     DapUIModifiedValue = { fg = p.water, bold = true },

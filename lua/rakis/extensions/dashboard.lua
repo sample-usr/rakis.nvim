@@ -8,17 +8,17 @@ function M.get(options, p)
 
   local highlights = {
     DashboardHeader = { fg = p.spice },
-    DashboardFooter = { fg = p.water },
+    DashboardFooter = { fg = p.subtle },
     DashboardShortCut = { fg = p.muted },
-    DashboardDesc = { fg = p.spice },
-    DashboardKey = { fg = p.bloom },
-    DashboardIcon = { fg = p.bloom },
+    DashboardDesc = { fg = p.text },
+    DashboardKey = { fg = p.spice },
+    DashboardIcon = { fg = p.water },
     DashboardProjectTitle = { fg = p.glowglobe },
     DashboardProjectTitleIcon = { fg = p.glowglobe },
-    DashboardProjectIcon = { fg = p.bloom },
+    DashboardProjectIcon = { fg = p.water },
     DashboardMruTitle = { fg = p.water },
     DashboardMruIcon = { fg = p.water },
-    DashboardFiles = { fg = p.water },
+    DashboardFiles = { fg = p.text },
     DashboardShortCutIcon = { fg = p.muted },
   }
 

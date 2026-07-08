@@ -11,7 +11,7 @@ function M.get(options, p)
     LazyButton = { fg = p.text, bg = p.overlay },
     LazyButtonActive = { fg = p.text, bg = p.overlay, bold = true },
 
-    LazyProgressDone = { bold = true, fg = p.bloom },
+    LazyProgressDone = { bold = true, fg = p.spice },
     LazyProgressTodo = { bold = true, fg = p.muted },
 
     LazyReasonCmd = { fg = p.glowglobe },
@@ -23,7 +23,7 @@ function M.get(options, p)
     LazyReasonStart = { fg = p.muted },
     LazySpecial = { fg = p.water },
 
-    Bold = { fg = p.muted, bold = true, italic = true },
+    Bold = { bold = true },
   }
   return highlights
 end

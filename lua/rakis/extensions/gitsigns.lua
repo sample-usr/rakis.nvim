@@ -8,7 +8,7 @@ function M.get(opts, t)
   opts = opts or {}
   local highlights = {
     GitSignsAdd = { fg = t.oasis },
-    GitSignsChange = { fg = t.spice },
+    GitSignsChange = { fg = t.glowglobe },
     GitSignsDelete = { fg = t.blood },
 
     GitSignsAddLn = { link = "DiffAdd" },

@@ -10,38 +10,38 @@ function M.get(opts, p)
   local highlights = {
     -- Normal mode
     lualine_a_normal = { fg = p.bg, bg = p.ibad, bold = true },
-    lualine_b_normal = { fg = p.text, bg = p.highlight },
-    lualine_c_normal = { fg = p.subtle, bg = p.bg },
+    lualine_b_normal = { fg = p.text, bg = p.overlay },
+    lualine_c_normal = { fg = p.subtle, bg = p.surface },
 
     -- Insert mode
     lualine_a_insert = { fg = p.bg, bg = p.oasis, bold = true },
-    lualine_b_insert = { fg = p.text, bg = p.highlight },
-    lualine_c_insert = { fg = p.subtle, bg = p.bg },
+    lualine_b_insert = { fg = p.text, bg = p.overlay },
+    lualine_c_insert = { fg = p.subtle, bg = p.surface },
 
     -- Visual mode
     lualine_a_visual = { fg = p.bg, bg = p.dusk, bold = true },
-    lualine_b_visual = { fg = p.text, bg = p.highlight },
-    lualine_c_visual = { fg = p.subtle, bg = p.bg },
+    lualine_b_visual = { fg = p.text, bg = p.overlay },
+    lualine_c_visual = { fg = p.subtle, bg = p.surface },
 
     -- Replace mode
     lualine_a_replace = { fg = p.bg, bg = p.spice, bold = true },
-    lualine_b_replace = { fg = p.text, bg = p.highlight },
-    lualine_c_replace = { fg = p.subtle, bg = p.bg },
+    lualine_b_replace = { fg = p.text, bg = p.overlay },
+    lualine_c_replace = { fg = p.subtle, bg = p.surface },
 
     -- Command mode
     lualine_a_command = { fg = p.bg, bg = p.glowglobe, bold = true },
-    lualine_b_command = { fg = p.text, bg = p.highlight },
-    lualine_c_command = { fg = p.subtle, bg = p.bg },
+    lualine_b_command = { fg = p.text, bg = p.overlay },
+    lualine_c_command = { fg = p.subtle, bg = p.surface },
 
     -- Inactive
-    lualine_a_inactive = { fg = p.subtle, bg = p.bg },
-    lualine_b_inactive = { fg = p.subtle, bg = p.bg },
-    lualine_c_inactive = { fg = p.subtle, bg = p.bg },
+    lualine_a_inactive = { fg = p.subtle, bg = p.surface },
+    lualine_b_inactive = { fg = p.subtle, bg = p.surface },
+    lualine_c_inactive = { fg = p.subtle, bg = p.surface },
 
     -- Terminal
     lualine_a_terminal = { fg = p.bg, bg = p.water, bold = true },
-    lualine_b_terminal = { fg = p.text, bg = p.highlight },
-    lualine_c_terminal = { fg = p.subtle, bg = p.bg },
+    lualine_b_terminal = { fg = p.text, bg = p.overlay },
+    lualine_c_terminal = { fg = p.subtle, bg = p.surface },
 
     -- Diagnostics
     lualine_diagnostics_error_normal = { fg = p.blood },

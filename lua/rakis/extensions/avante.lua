@@ -16,8 +16,8 @@ function M.get(opts, p)
     AvanteReversedThirdTitle = { fg = p.dusk },
 
     -- Prompt
-    AvantePromptInput = { fg = p.text, bg = p.bg },
-    AvantePromptInputBorder = { fg = p.highlight, bg = p.bg },
+    AvantePromptInput = { fg = p.text, bg = p.surface },
+    AvantePromptInputBorder = { fg = p.highlight, bg = p.surface },
 
     -- Conflict
     AvanteConflictCurrent = { fg = p.oasis, bg = p.bg },

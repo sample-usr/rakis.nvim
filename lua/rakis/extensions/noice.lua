@@ -11,14 +11,14 @@ function M.get(opts, p)
     NoiceCmdline = { fg = p.text, bg = p.bg },
     NoiceCmdlineIcon = { fg = p.water },
     NoiceCmdlineIconSearch = { fg = p.glowglobe },
-    NoiceCmdlinePopup = { fg = p.text, bg = p.bg },
-    NoiceCmdlinePopupBorder = { fg = p.highlight, bg = p.bg },
-    NoiceCmdlinePopupBorderSearch = { fg = p.glowglobe, bg = p.bg },
+    NoiceCmdlinePopup = { fg = p.text, bg = p.surface },
+    NoiceCmdlinePopupBorder = { fg = p.highlight, bg = p.surface },
+    NoiceCmdlinePopupBorderSearch = { fg = p.glowglobe, bg = p.surface },
     NoiceCmdlinePrompt = { fg = p.water },
 
     -- Confirm
-    NoiceConfirm = { fg = p.text, bg = p.bg },
-    NoiceConfirmBorder = { fg = p.highlight, bg = p.bg },
+    NoiceConfirm = { fg = p.text, bg = p.surface },
+    NoiceConfirmBorder = { fg = p.highlight, bg = p.surface },
 
     -- Cursor
     NoiceCursor = { fg = p.bg, bg = p.text },
@@ -35,8 +35,8 @@ function M.get(opts, p)
     NoiceFormatLevelOff = { fg = p.subtle },
     NoiceFormatLevelTrace = { fg = p.dusk },
     NoiceFormatLevelWarn = { fg = p.glowglobe },
-    NoiceFormatProgressDone = { fg = p.oasis, bg = p.highlight },
-    NoiceFormatProgressTodo = { fg = p.subtle, bg = p.highlight },
+    NoiceFormatProgressDone = { fg = p.oasis, bg = p.overlay },
+    NoiceFormatProgressTodo = { fg = p.subtle, bg = p.overlay },
     NoiceFormatTitle = { fg = p.water, bold = true },
 
     -- LSP messages
@@ -48,12 +48,12 @@ function M.get(opts, p)
     NoiceMini = { fg = p.text, bg = p.bg },
 
     -- Popups
-    NoicePopup = { fg = p.text, bg = p.bg },
-    NoicePopupBorder = { fg = p.highlight, bg = p.bg },
+    NoicePopup = { fg = p.text, bg = p.surface },
+    NoicePopupBorder = { fg = p.highlight, bg = p.surface },
 
     -- Popupmenu
     NoicePopupmenu = { link = "Pmenu" },
-    NoicePopupmenuBorder = { fg = p.highlight, bg = p.bg },
+    NoicePopupmenuBorder = { fg = p.highlight, bg = p.surface },
     NoicePopupmenuMatch = { fg = p.water, bold = true },
     NoicePopupmenuSelected = { link = "PmenuSel" },
 

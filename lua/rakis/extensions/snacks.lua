@@ -48,7 +48,7 @@ function M.get(opts, p)
     SnacksPickerPreviewCursorLine = { bg = p.overlay },
 
     -- Dashboard
-    SnacksDashboardHeader = { fg = p.ibad },
+    SnacksDashboardHeader = { fg = p.spice },
     SnacksDashboardFooter = { fg = p.dusk },
     SnacksDashboardIcon = { fg = p.water },
     SnacksDashboardKey = { fg = p.spice },

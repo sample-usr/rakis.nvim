@@ -13,14 +13,14 @@ function M.get(opts, p)
     DiffviewSecondary = { fg = p.water },
 
     -- Window
-    DiffviewNormal = { fg = p.text, bg = p.highlight },
-    DiffviewCursorLine = { bg = p.highlight },
-    DiffviewVertSplit = { fg = p.highlight },
-    DiffviewWinSeparator = { fg = p.highlight },
-    DiffviewSignColumn = { bg = p.highlight },
+    DiffviewNormal = { fg = p.text, bg = p.bg },
+    DiffviewCursorLine = { bg = p.overlay },
+    DiffviewVertSplit = { fg = p.overlay },
+    DiffviewWinSeparator = { fg = p.overlay },
+    DiffviewSignColumn = { bg = p.bg },
     DiffviewStatusLine = { fg = p.text, bg = p.bg },
     DiffviewStatusLineNC = { fg = p.subtle, bg = p.bg },
-    DiffviewEndOfBuffer = { fg = p.highlight },
+    DiffviewEndOfBuffer = { fg = p.faint },
 
     -- File panel
     DiffviewFilePanelTitle = { fg = p.water, bold = true },
@@ -59,7 +59,7 @@ function M.get(opts, p)
     DiffviewDiffAdd = { bg = util.blend(p.bg_solid, p.oasis, 0.8) },
     DiffviewDiffChange = { bg = util.blend(p.bg_solid, p.ibad, 0.8) },
     DiffviewDiffDelete = { bg = util.blend(p.bg_solid, p.blood, 0.8) },
-    DiffviewDiffText = { bg = util.blend(p.bg_solid, p.glowglobe, 0.7) },
+    DiffviewDiffText = { bg = util.blend(p.bg_solid, p.spice, 0.7) },
   }
   return highlights
 end

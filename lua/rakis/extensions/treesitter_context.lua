@@ -7,10 +7,10 @@ local M = {}
 function M.get(opts, p)
   opts = opts or {}
   local highlights = {
-    TreesitterContext = { bg = p.highlight },
-    TreesitterContextLineNumber = { fg = p.spice, bg = p.highlight },
-    TreesitterContextSeparator = { fg = p.highlight },
-    TreesitterContextBottom = { sp = p.highlight, underline = true },
+    TreesitterContext = { bg = p.surface },
+    TreesitterContextLineNumber = { fg = p.spice, bg = p.surface },
+    TreesitterContextSeparator = { fg = p.overlay },
+    TreesitterContextBottom = { sp = p.overlay, underline = true },
   }
   return highlights
 end

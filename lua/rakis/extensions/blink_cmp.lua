@@ -7,6 +7,11 @@ local M = {}
 function M.get(opts, p)
   opts = opts or {}
   local highlights = {
+    -- Menu window
+    BlinkCmpMenu = { fg = p.text, bg = p.surface },
+    BlinkCmpMenuBorder = { fg = p.highlight, bg = p.surface },
+    BlinkCmpMenuSelection = { bg = p.highlight },
+
     -- Documentation window
     BlinkCmpDoc = { bg = p.surface },
     BlinkCmpDocSeparator = { bg = p.surface },
@@ -16,37 +21,37 @@ function M.get(opts, p)
     BlinkCmpGhostText = { fg = p.subtle, italic = true },
 
     -- Labels
-    BlinkCmpLabel = { fg = p.subtle },
+    BlinkCmpLabel = { fg = p.text },
     BlinkCmpLabelDeprecated = { fg = p.subtle, strikethrough = true },
-    BlinkCmpLabelMatch = { fg = p.text, bold = true },
+    BlinkCmpLabelMatch = { fg = p.spice, bold = true },
 
     -- Kind icons
     BlinkCmpDefault = { fg = p.muted },
-    BlinkCmpKindText = { fg = p.spice },
-    BlinkCmpKindMethod = { fg = p.water },
-    BlinkCmpKindFunction = { fg = p.water },
-    BlinkCmpKindConstructor = { fg = p.water },
-    BlinkCmpKindField = { fg = p.spice },
-    BlinkCmpKindVariable = { fg = p.ibad },
-    BlinkCmpKindClass = { fg = p.glowglobe },
-    BlinkCmpKindInterface = { fg = p.glowglobe },
+    BlinkCmpKindText = { fg = p.oasis },
+    BlinkCmpKindMethod = { fg = p.ibad },
+    BlinkCmpKindFunction = { fg = p.ibad },
+    BlinkCmpKindConstructor = { fg = p.ibad },
+    BlinkCmpKindField = { fg = p.water },
+    BlinkCmpKindVariable = { fg = p.text },
+    BlinkCmpKindClass = { fg = p.water },
+    BlinkCmpKindInterface = { fg = p.water },
     BlinkCmpKindModule = { fg = p.water },
     BlinkCmpKindProperty = { fg = p.water },
-    BlinkCmpKindUnit = { fg = p.spice },
-    BlinkCmpKindValue = { fg = p.blood },
-    BlinkCmpKindKeyword = { fg = p.dusk },
-    BlinkCmpKindSnippet = { fg = p.ibad },
-    BlinkCmpKindColor = { fg = p.blood },
+    BlinkCmpKindUnit = { fg = p.glowglobe },
+    BlinkCmpKindValue = { fg = p.glowglobe },
+    BlinkCmpKindKeyword = { fg = p.spice },
+    BlinkCmpKindSnippet = { fg = p.bloom },
+    BlinkCmpKindColor = { fg = p.bloom },
     BlinkCmpKindFile = { fg = p.water },
-    BlinkCmpKindReference = { fg = p.blood },
-    BlinkCmpKindFolder = { fg = p.water },
+    BlinkCmpKindReference = { fg = p.water },
+    BlinkCmpKindFolder = { fg = p.ibad },
     BlinkCmpKindEnum = { fg = p.water },
     BlinkCmpKindEnumMember = { fg = p.water },
-    BlinkCmpKindConstant = { fg = p.glowglobe },
+    BlinkCmpKindConstant = { fg = p.dusk },
     BlinkCmpKindStruct = { fg = p.water },
-    BlinkCmpKindEvent = { fg = p.water },
-    BlinkCmpKindOperator = { fg = p.water },
-    BlinkCmpKindTypeParameter = { fg = p.dusk },
+    BlinkCmpKindEvent = { fg = p.spice },
+    BlinkCmpKindOperator = { fg = p.bloom },
+    BlinkCmpKindTypeParameter = { fg = p.water },
 
     -- AI completion providers
     BlinkCmpKindCodeium = { fg = p.water },

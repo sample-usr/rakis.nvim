@@ -19,7 +19,7 @@ function M.get(opts, p)
     NvimTreeImageFile = { fg = p.dusk },
     NvimTreeSpecialFile = { fg = p.glowglobe },
     NvimTreeSymlink = { fg = p.dusk },
-    NvimTreeOpenedFile = { fg = p.text, bg = p.highlight },
+    NvimTreeOpenedFile = { fg = p.text, bg = p.overlay },
 
     -- Git
     NvimTreeGitDirty = { fg = p.glowglobe },
@@ -42,9 +42,9 @@ function M.get(opts, p)
     NvimTreeNormal = { fg = p.text, bg = p.bg },
     NvimTreeNormalNC = { fg = p.text, bg = p.bg },
     NvimTreeEndOfBuffer = { fg = p.bg },
-    NvimTreeCursorLine = { bg = p.highlight },
-    NvimTreeVertSplit = { fg = p.highlight, bg = p.bg },
-    NvimTreeWinSeparator = { fg = p.highlight, bg = p.bg },
+    NvimTreeCursorLine = { bg = p.overlay },
+    NvimTreeVertSplit = { fg = p.overlay, bg = p.bg },
+    NvimTreeWinSeparator = { fg = p.overlay, bg = p.bg },
     NvimTreeStatusLine = { fg = p.bg, bg = p.bg },
     NvimTreeStatusLineNC = { fg = p.bg, bg = p.bg },
 
@@ -52,7 +52,7 @@ function M.get(opts, p)
     NvimTreeWindowPicker = { fg = p.bg, bg = p.water, bold = true },
 
     -- Indent markers
-    NvimTreeIndentMarker = { fg = p.highlight },
+    NvimTreeIndentMarker = { fg = p.faint },
 
     -- LSP diagnostics
     NvimTreeLspDiagnosticsError = { fg = p.blood },
