@@ -8,28 +8,28 @@ function M.get(opts, p)
   opts = opts or {}
   local highlights = {
     -- Titles
-    AvanteTitle = { fg = p.bg, bg = p.blue03, bold = true },
-    AvanteReversedTitle = { fg = p.blue03 },
-    AvanteSubtitle = { fg = p.bg, bg = p.cyan03 },
-    AvanteReversedSubtitle = { fg = p.cyan03 },
-    AvanteThirdTitle = { fg = p.bg, bg = p.violet03 },
-    AvanteReversedThirdTitle = { fg = p.violet03 },
+    AvanteTitle = { fg = p.bg, bg = p.ibad, bold = true },
+    AvanteReversedTitle = { fg = p.ibad },
+    AvanteSubtitle = { fg = p.bg, bg = p.water },
+    AvanteReversedSubtitle = { fg = p.water },
+    AvanteThirdTitle = { fg = p.bg, bg = p.dusk },
+    AvanteReversedThirdTitle = { fg = p.dusk },
 
     -- Prompt
-    AvantePromptInput = { fg = p.fg, bg = p.bg },
-    AvantePromptInputBorder = { fg = p.bg_highlight, bg = p.bg },
+    AvantePromptInput = { fg = p.text, bg = p.bg },
+    AvantePromptInputBorder = { fg = p.highlight, bg = p.bg },
 
     -- Conflict
-    AvanteConflictCurrent = { fg = p.green03, bg = p.bg },
-    AvanteConflictCurrentLabel = { fg = p.bg, bg = p.green03 },
-    AvanteConflictIncoming = { fg = p.blue03, bg = p.bg },
-    AvanteConflictIncomingLabel = { fg = p.bg, bg = p.blue03 },
+    AvanteConflictCurrent = { fg = p.oasis, bg = p.bg },
+    AvanteConflictCurrentLabel = { fg = p.bg, bg = p.oasis },
+    AvanteConflictIncoming = { fg = p.ibad, bg = p.bg },
+    AvanteConflictIncomingLabel = { fg = p.bg, bg = p.ibad },
 
     -- Popup
-    AvantePopupHint = { fg = p.cyan02 },
+    AvantePopupHint = { fg = p.water },
 
     -- Code blocks
-    AvanteInlineHint = { fg = p.base01, italic = true },
+    AvanteInlineHint = { fg = p.subtle, italic = true },
   }
   return highlights
 end

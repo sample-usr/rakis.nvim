@@ -8,28 +8,28 @@ function M.get(opts, p)
   opts = opts or {}
   local highlights = {
     -- Help
-    GrugFarHelpHeader = { fg = p.cyan03, bold = true },
-    GrugFarHelpHeaderKey = { fg = p.yellow03 },
-    GrugFarHelpWinActionKey = { fg = p.yellow03 },
-    GrugFarHelpWinActionPrefix = { fg = p.cyan03 },
-    GrugFarHelpWinActionText = { fg = p.fg },
-    GrugFarHelpWinHeader = { fg = p.cyan03, bold = true },
+    GrugFarHelpHeader = { fg = p.water, bold = true },
+    GrugFarHelpHeaderKey = { fg = p.glowglobe },
+    GrugFarHelpWinActionKey = { fg = p.glowglobe },
+    GrugFarHelpWinActionPrefix = { fg = p.water },
+    GrugFarHelpWinActionText = { fg = p.text },
+    GrugFarHelpWinHeader = { fg = p.water, bold = true },
 
     -- Input
-    GrugFarInputLabel = { fg = p.cyan03 },
-    GrugFarInputPlaceholder = { fg = p.base01, italic = true },
+    GrugFarInputLabel = { fg = p.water },
+    GrugFarInputPlaceholder = { fg = p.subtle, italic = true },
 
     -- Results
-    GrugFarResultsActionMessage = { fg = p.cyan03 },
-    GrugFarResultsChangeIndicator = { fg = p.yellow03 },
-    GrugFarResultsRemoveIndicator = { fg = p.red03 },
-    GrugFarResultsAddIndicator = { fg = p.green03 },
-    GrugFarResultsHeader = { fg = p.cyan03, bold = true },
-    GrugFarResultsLineNo = { fg = p.violet03 },
-    GrugFarResultsLineColumn = { fg = p.violet03 },
-    GrugFarResultsMatch = { fg = p.bg, bg = p.yellow03 },
-    GrugFarResultsPath = { fg = p.cyan03 },
-    GrugFarResultsStats = { fg = p.base01 },
+    GrugFarResultsActionMessage = { fg = p.water },
+    GrugFarResultsChangeIndicator = { fg = p.glowglobe },
+    GrugFarResultsRemoveIndicator = { fg = p.blood },
+    GrugFarResultsAddIndicator = { fg = p.oasis },
+    GrugFarResultsHeader = { fg = p.water, bold = true },
+    GrugFarResultsLineNo = { fg = p.dusk },
+    GrugFarResultsLineColumn = { fg = p.dusk },
+    GrugFarResultsMatch = { fg = p.bg, bg = p.glowglobe },
+    GrugFarResultsPath = { fg = p.water },
+    GrugFarResultsStats = { fg = p.subtle },
   }
   return highlights
 end

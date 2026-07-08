@@ -6,24 +6,24 @@ local M = {}
 function M.get(options, p)
   options = options or {}
   local highlights = {
-    LazyH1 = { fg = p.orange03, bold = true },
-    LazyH2 = { fg = p.fg, bold = true },
-    LazyButton = { fg = p.fg, bg = p.base03 },
-    LazyButtonActive = { fg = p.fg, bg = p.base03, bold = true },
+    LazyH1 = { fg = p.spice, bold = true },
+    LazyH2 = { fg = p.text, bold = true },
+    LazyButton = { fg = p.text, bg = p.overlay },
+    LazyButtonActive = { fg = p.text, bg = p.overlay, bold = true },
 
-    LazyProgressDone = { bold = true, fg = p.magenta03 },
-    LazyProgressTodo = { bold = true, fg = p.base02 },
+    LazyProgressDone = { bold = true, fg = p.bloom },
+    LazyProgressTodo = { bold = true, fg = p.muted },
 
-    LazyReasonCmd = { fg = p.yellow03 },
-    LazyReasonEvent = { fg = p.magenta03 },
-    LazyReasonKeys = { fg = p.cyan03 },
-    LazyReasonPlugin = { fg = p.green03 },
-    LazyReasonRequire = { fg = p.violet03 },
-    LazyReasonRuntime = { fg = p.red02 },
-    LazyReasonStart = { fg = p.base02 },
-    LazySpecial = { fg = p.cyan01 },
+    LazyReasonCmd = { fg = p.glowglobe },
+    LazyReasonEvent = { fg = p.bloom },
+    LazyReasonKeys = { fg = p.water },
+    LazyReasonPlugin = { fg = p.oasis },
+    LazyReasonRequire = { fg = p.dusk },
+    LazyReasonRuntime = { fg = p.blood },
+    LazyReasonStart = { fg = p.muted },
+    LazySpecial = { fg = p.water },
 
-    Bold = { fg = p.base02, bold = true, italic = true },
+    Bold = { fg = p.muted, bold = true, italic = true },
   }
   return highlights
 end

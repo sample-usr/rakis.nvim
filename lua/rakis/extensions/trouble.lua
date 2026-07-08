@@ -6,14 +6,14 @@ local M = {}
 function M.get(options, p)
   options = options or {}
   local highlights = {
-    TroubleCode = { fg = p.magenta03 },
-    TroubleCount = { bg = p.bg_highlight, bold = true },
-    TroubleDirectory = { fg = p.base02, bold = true },
-    TroubleFilename = { fg = p.cyan03 },
-    TroubleIconArray = { fg = p.violet02 },
+    TroubleCode = { fg = p.bloom },
+    TroubleCount = { bg = p.highlight, bold = true },
+    TroubleDirectory = { fg = p.muted, bold = true },
+    TroubleFilename = { fg = p.water },
+    TroubleIconArray = { fg = p.dusk },
     TroubleIconBoolean = { link = "Boolean" },
     TroubleIconConstant = { link = "Constant" },
-    TroubleIconDirectory = { fg = p.violet02 },
+    TroubleIconDirectory = { fg = p.dusk },
     TroubleIconEvent = { link = "Special" },
     TroubleIconField = { link = "Boolean" },
     TroubleIconFile = { link = "Normal" },

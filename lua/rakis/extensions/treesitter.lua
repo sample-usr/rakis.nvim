@@ -8,33 +8,33 @@ function M.get(opts, p)
   opts = opts or {}
   local highlights = {
     -- Variables
-    ["@variable"] = { fg = p.fg, italic = opts.italic_comments },
-    ["@variable.builtin"] = { fg = p.cyan02, italic = opts.italic_comments, bold = true },
-    ["@variable.parameter"] = { fg = p.orange02, italic = opts.italic_comments },
-    ["@variable.parameter.builtin"] = { fg = p.orange02, italic = opts.italic_comments, bold = true },
-    ["@variable.member"] = { fg = p.cyan03 },
+    ["@variable"] = { fg = p.text, italic = opts.italic_comments },
+    ["@variable.builtin"] = { fg = p.dusk, italic = opts.italic_comments, bold = true },
+    ["@variable.parameter"] = { fg = util.blend(p.spice, p.text, 0.5), italic = opts.italic_comments },
+    ["@variable.parameter.builtin"] = { fg = util.blend(p.spice, p.text, 0.5), italic = opts.italic_comments, bold = true },
+    ["@variable.member"] = { fg = p.water },
 
     -- Constants
     ["@constant"] = { link = "Constant" },
-    ["@constant.builtin"] = { fg = p.cyan02, bold = true },
+    ["@constant.builtin"] = { fg = p.dusk, bold = true },
     ["@constant.macro"] = { link = "Define" },
 
     -- Modules
-    ["@module"] = { fg = p.fg },
-    ["@module.builtin"] = { fg = p.fg, bold = true },
+    ["@module"] = { fg = p.text },
+    ["@module.builtin"] = { fg = p.text, bold = true },
 
     -- Labels
     ["@label"] = { link = "Label" },
 
     -- Strings
     ["@string"] = { link = "String" },
-    ["@string.documentation"] = { fg = p.green02, italic = true },
-    ["@string.regexp"] = { fg = p.violet02 },
-    ["@string.escape"] = { fg = p.orange03 },
+    ["@string.documentation"] = { fg = p.oasis, italic = true },
+    ["@string.regexp"] = { fg = p.dusk },
+    ["@string.escape"] = { fg = p.spice },
     ["@string.special"] = { link = "SpecialChar" },
     ["@string.special.symbol"] = { link = "Identifier" },
-    ["@string.special.url"] = { fg = p.blue03, underline = true },
-    ["@string.special.path"] = { fg = p.cyan03 },
+    ["@string.special.url"] = { fg = p.ibad, underline = true },
+    ["@string.special.path"] = { fg = p.water },
 
     -- Characters
     ["@character"] = { link = "Character" },
@@ -48,67 +48,67 @@ function M.get(opts, p)
 
     -- Types
     ["@type"] = { link = "Type" },
-    ["@type.builtin"] = { fg = util.blend(p.violet02, p.magenta03, 0.65), bold = true },
+    ["@type.builtin"] = { fg = p.water, bold = true },
     ["@type.definition"] = { link = "Typedef" },
     ["@type.qualifier"] = { link = "@keyword" },
 
     -- Attributes & Properties
-    ["@attribute"] = { fg = p.violet02 },
-    ["@attribute.builtin"] = { fg = p.violet02, bold = true },
-    ["@property"] = { fg = p.cyan03, italic = opts.italic_comments },
+    ["@attribute"] = { fg = p.dusk },
+    ["@attribute.builtin"] = { fg = p.dusk, bold = true },
+    ["@property"] = { fg = p.water, italic = opts.italic_comments },
 
     -- Functions
     ["@function"] = { link = "Function" },
-    ["@function.builtin"] = { fg = p.blue02, bold = true },
+    ["@function.builtin"] = { fg = p.ibad, bold = true },
     ["@function.call"] = { link = "@function" },
     ["@function.macro"] = { link = "Macro" },
-    ["@function.method"] = { fg = p.blue02 },
-    ["@function.method.call"] = { fg = p.violet02 },
+    ["@function.method"] = { fg = p.ibad },
+    ["@function.method.call"] = { fg = p.ibad },
 
     -- Constructors
-    ["@constructor"] = { fg = p.cyan03 },
+    ["@constructor"] = { fg = p.water },
 
     -- Operators
     ["@operator"] = { link = "Operator" },
 
     -- Keywords
     ["@keyword"] = { link = "Keyword" },
-    ["@keyword.coroutine"] = { fg = p.orange03 },
-    ["@keyword.function"] = { fg = p.orange03 },
-    ["@keyword.operator"] = { fg = p.magenta02 },
-    ["@keyword.import"] = { fg = p.orange03 },
-    ["@keyword.storage"] = { fg = p.cyan03 },
-    ["@keyword.repeat"] = { fg = p.orange03 },
-    ["@keyword.return"] = { fg = p.orange03 },
-    ["@keyword.debug"] = { fg = p.red01 },
-    ["@keyword.exception"] = { fg = p.orange03 },
-    ["@keyword.conditional"] = { fg = p.orange03 },
-    ["@keyword.conditional.ternary"] = { fg = p.orange03 },
-    ["@keyword.directive"] = { fg = p.violet02 },
-    ["@keyword.directive.define"] = { fg = p.violet02 },
+    ["@keyword.coroutine"] = { fg = p.spice },
+    ["@keyword.function"] = { fg = p.spice },
+    ["@keyword.operator"] = { fg = p.bloom },
+    ["@keyword.import"] = { fg = p.spice },
+    ["@keyword.storage"] = { fg = p.spice },
+    ["@keyword.repeat"] = { fg = p.spice },
+    ["@keyword.return"] = { fg = p.spice },
+    ["@keyword.debug"] = { fg = p.blood },
+    ["@keyword.exception"] = { fg = p.spice },
+    ["@keyword.conditional"] = { fg = p.spice },
+    ["@keyword.conditional.ternary"] = { fg = p.spice },
+    ["@keyword.directive"] = { fg = p.dusk },
+    ["@keyword.directive.define"] = { fg = p.dusk },
 
     -- Punctuation
-    ["@punctuation.delimiter"] = { fg = p.base01 },
-    ["@punctuation.bracket"] = { fg = p.base01 },
-    ["@punctuation.special"] = { fg = p.base01 },
+    ["@punctuation.delimiter"] = { fg = p.muted },
+    ["@punctuation.bracket"] = { fg = p.muted },
+    ["@punctuation.special"] = { fg = p.muted },
 
     -- Comments
     ["@comment"] = { link = "Comment" },
-    ["@comment.documentation"] = { fg = p.base01, italic = true },
-    ["@comment.error"] = { fg = p.red02, bg = util.blend(p.bg_solid, p.red02, 0.9) },
-    ["@comment.warning"] = { fg = p.yellow02, bg = util.blend(p.bg_solid, p.yellow02, 0.9) },
-    ["@comment.todo"] = { fg = p.violet02, bg = util.blend(p.bg_solid, p.violet02, 0.9) },
-    ["@comment.hint"] = { fg = p.cyan02, bg = util.blend(p.bg_solid, p.cyan02, 0.9) },
-    ["@comment.info"] = { fg = p.blue02, bg = util.blend(p.bg_solid, p.blue02, 0.9) },
-    ["@comment.note"] = { fg = p.blue02, bg = util.blend(p.bg_solid, p.blue02, 0.9) },
+    ["@comment.documentation"] = { fg = p.subtle, italic = true },
+    ["@comment.error"] = { fg = p.blood, bg = util.blend(p.bg_solid, p.blood, 0.9) },
+    ["@comment.warning"] = { fg = p.glowglobe, bg = util.blend(p.bg_solid, p.glowglobe, 0.9) },
+    ["@comment.todo"] = { fg = p.dusk, bg = util.blend(p.bg_solid, p.dusk, 0.9) },
+    ["@comment.hint"] = { fg = p.water, bg = util.blend(p.bg_solid, p.water, 0.9) },
+    ["@comment.info"] = { fg = p.ibad, bg = util.blend(p.bg_solid, p.ibad, 0.9) },
+    ["@comment.note"] = { fg = p.ibad, bg = util.blend(p.bg_solid, p.ibad, 0.9) },
 
     -- Markup (Markdown/Documentation)
-    ["@markup.strong"] = { fg = p.violet01, bold = true },
-    ["@markup.italic"] = { fg = p.blue03, italic = true },
+    ["@markup.strong"] = { fg = p.dusk, bold = true },
+    ["@markup.italic"] = { italic = true },
     ["@markup.strikethrough"] = { strikethrough = true },
     ["@markup.underline"] = { underline = true },
 
-    ["@markup.heading"] = { fg = p.cyan03, bold = true },
+    ["@markup.heading"] = { fg = p.spice, bold = true },
     ["@markup.heading.1.markdown"] = { link = "markdownH1" },
     ["@markup.heading.2.markdown"] = { link = "markdownH2" },
     ["@markup.heading.3.markdown"] = { link = "markdownH3" },
@@ -122,39 +122,39 @@ function M.get(opts, p)
     ["@markup.heading.5.marker.markdown"] = { link = "markdownH5" },
     ["@markup.heading.6.marker.markdown"] = { link = "markdownH6" },
 
-    ["@markup.quote"] = { fg = p.base01, italic = true },
+    ["@markup.quote"] = { fg = p.subtle, italic = true },
     ["@markup.math"] = { link = "Special" },
     ["@markup.environment"] = { link = "Macro" },
     ["@markup.environment.name"] = { link = "Type" },
 
-    ["@markup.link"] = { fg = p.blue03 },
-    ["@markup.link.label"] = { fg = p.cyan03 },
-    ["@markup.link.label.markdown_inline"] = { fg = p.cyan03 },
-    ["@markup.link.url"] = { fg = p.blue03, underline = true },
-    ["@markup.link.markdown_inline"] = { fg = p.base01 },
+    ["@markup.link"] = { fg = p.ibad },
+    ["@markup.link.label"] = { fg = p.water },
+    ["@markup.link.label.markdown_inline"] = { fg = p.water },
+    ["@markup.link.url"] = { fg = p.ibad, underline = true },
+    ["@markup.link.markdown_inline"] = { fg = p.subtle },
 
-    ["@markup.raw"] = { fg = p.cyan03, bg = p.bg_highlight },
-    ["@markup.raw.block"] = { fg = p.cyan03, bg = p.bg_highlight },
-    ["@markup.raw.delimiter.markdown"] = { fg = p.base01 },
-    ["@markup.raw.markdown_inline"] = { fg = p.cyan03, bg = p.bg_highlight },
+    ["@markup.raw"] = { fg = p.water, bg = p.overlay },
+    ["@markup.raw.block"] = { fg = p.water, bg = p.overlay },
+    ["@markup.raw.delimiter.markdown"] = { fg = p.muted },
+    ["@markup.raw.markdown_inline"] = { fg = p.water, bg = p.overlay },
 
-    ["@markup.list"] = { fg = p.orange03 },
-    ["@markup.list.checked"] = { fg = p.green02, bold = true },
-    ["@markup.list.unchecked"] = { fg = p.magenta03, bold = true },
+    ["@markup.list"] = { fg = p.spice },
+    ["@markup.list.checked"] = { fg = p.oasis, bold = true },
+    ["@markup.list.unchecked"] = { fg = p.muted, bold = true },
 
     -- Diff
-    ["@diff.plus"] = { fg = p.green03, bg = util.blend(p.bg_solid, p.green03, 0.8) },
-    ["@diff.minus"] = { fg = p.red03, bg = util.blend(p.bg_solid, p.red03, 0.8) },
-    ["@diff.delta"] = { fg = p.blue03, bg = util.blend(p.bg_solid, p.blue03, 0.8) },
+    ["@diff.plus"] = { fg = p.oasis, bg = util.blend(p.bg_solid, p.oasis, 0.8) },
+    ["@diff.minus"] = { fg = p.blood, bg = util.blend(p.bg_solid, p.blood, 0.8) },
+    ["@diff.delta"] = { fg = p.ibad, bg = util.blend(p.bg_solid, p.ibad, 0.8) },
 
     -- Tags (HTML/XML)
-    ["@tag"] = { fg = p.cyan03 },
-    ["@tag.attribute"] = { fg = p.violet02 },
-    ["@tag.delimiter"] = { fg = p.base01 },
+    ["@tag"] = { fg = p.water },
+    ["@tag.attribute"] = { fg = p.dusk },
+    ["@tag.delimiter"] = { fg = p.muted },
 
     -- Special
     ["@conceal"] = { link = "Conceal" },
-    ["@conceal.markdown"] = { fg = p.base01 },
+    ["@conceal.markdown"] = { fg = p.muted },
 
     -- Legacy TreeSitter groups (still used by some parsers)
     ["@annotation"] = { link = "PreProc" },
@@ -175,7 +175,7 @@ function M.get(opts, p)
     ["@symbol"] = { link = "Identifier" },
 
     -- Legacy @text.* groups (deprecated but still in use)
-    ["@text"] = { fg = p.fg },
+    ["@text"] = { fg = p.text },
     ["@text.danger"] = { link = "@comment.error" },
     ["@text.emphasis"] = { italic = true },
     ["@text.environment"] = { link = "Macro" },

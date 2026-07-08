@@ -8,25 +8,25 @@ function M.get(opts, p)
   opts = opts or {}
   local highlights = {
     -- Copilot suggestions
-    CopilotSuggestion = { fg = p.base01, italic = true },
-    CopilotAnnotation = { fg = p.base01, italic = true },
+    CopilotSuggestion = { fg = p.subtle, italic = true },
+    CopilotAnnotation = { fg = p.subtle, italic = true },
 
     -- Copilot panel (copilot.lua)
-    CopilotPanel = { fg = p.fg, bg = p.bg },
-    CopilotPanelTitle = { fg = p.cyan03, bold = true },
+    CopilotPanel = { fg = p.text, bg = p.bg },
+    CopilotPanelTitle = { fg = p.water, bold = true },
 
     -- Copilot chat (if using CopilotChat.nvim)
-    CopilotChatNormal = { fg = p.fg, bg = p.bg },
-    CopilotChatBorder = { fg = p.bg_highlight, bg = p.bg },
-    CopilotChatUser = { fg = p.cyan03, bold = true },
-    CopilotChatAgent = { fg = p.violet03, bold = true },
-    CopilotChatQuestion = { fg = p.yellow03 },
-    CopilotChatAnswer = { fg = p.green03 },
-    CopilotChatHeader = { fg = p.cyan03, bold = true },
-    CopilotChatSeparator = { fg = p.bg_highlight },
-    CopilotChatSpinner = { fg = p.cyan03 },
-    CopilotChatSuccess = { fg = p.green03 },
-    CopilotChatError = { fg = p.red03 },
+    CopilotChatNormal = { fg = p.text, bg = p.bg },
+    CopilotChatBorder = { fg = p.highlight, bg = p.bg },
+    CopilotChatUser = { fg = p.water, bold = true },
+    CopilotChatAgent = { fg = p.dusk, bold = true },
+    CopilotChatQuestion = { fg = p.glowglobe },
+    CopilotChatAnswer = { fg = p.oasis },
+    CopilotChatHeader = { fg = p.water, bold = true },
+    CopilotChatSeparator = { fg = p.highlight },
+    CopilotChatSpinner = { fg = p.water },
+    CopilotChatSuccess = { fg = p.oasis },
+    CopilotChatError = { fg = p.blood },
   }
   return highlights
 end

@@ -9,25 +9,25 @@ function M.get(opts, p)
   opts = opts or {}
   local highlights = {
     -- Flash.nvim
-    FlashBackdrop = { fg = p.base01 },
-    FlashCurrent = { fg = p.bg, bg = p.cyan03, bold = true },
-    FlashLabel = { fg = p.bg, bg = p.red03, bold = true },
-    FlashMatch = { fg = p.cyan03, bg = util.blend(p.bg_solid, p.cyan03, 0.8) },
-    FlashPrompt = { fg = p.fg, bg = p.bg },
-    FlashPromptIcon = { fg = p.cyan03 },
+    FlashBackdrop = { fg = p.subtle },
+    FlashCurrent = { fg = p.bg, bg = p.water, bold = true },
+    FlashLabel = { fg = p.bg, bg = p.blood, bold = true },
+    FlashMatch = { fg = p.water, bg = util.blend(p.bg_solid, p.water, 0.8) },
+    FlashPrompt = { fg = p.text, bg = p.bg },
+    FlashPromptIcon = { fg = p.water },
 
     -- Leap.nvim
-    LeapBackdrop = { fg = p.base01 },
-    LeapLabelPrimary = { fg = p.bg, bg = p.red03, bold = true },
-    LeapLabelSecondary = { fg = p.bg, bg = p.cyan03 },
-    LeapLabelSelected = { fg = p.bg, bg = p.yellow03 },
-    LeapMatch = { fg = p.cyan03, bg = util.blend(p.bg_solid, p.cyan03, 0.8), bold = true },
+    LeapBackdrop = { fg = p.subtle },
+    LeapLabelPrimary = { fg = p.bg, bg = p.blood, bold = true },
+    LeapLabelSecondary = { fg = p.bg, bg = p.water },
+    LeapLabelSelected = { fg = p.bg, bg = p.glowglobe },
+    LeapMatch = { fg = p.water, bg = util.blend(p.bg_solid, p.water, 0.8), bold = true },
 
     -- Hop.nvim (another navigation plugin)
-    HopNextKey = { fg = p.red03, bg = util.blend(p.bg_solid, p.red03, 0.8), bold = true },
-    HopNextKey1 = { fg = p.cyan03, bg = util.blend(p.bg_solid, p.cyan03, 0.8), bold = true },
-    HopNextKey2 = { fg = p.blue03, bg = util.blend(p.bg_solid, p.blue03, 0.8) },
-    HopUnmatched = { fg = p.base01 },
+    HopNextKey = { fg = p.blood, bg = util.blend(p.bg_solid, p.blood, 0.8), bold = true },
+    HopNextKey1 = { fg = p.water, bg = util.blend(p.bg_solid, p.water, 0.8), bold = true },
+    HopNextKey2 = { fg = p.ibad, bg = util.blend(p.bg_solid, p.ibad, 0.8) },
+    HopUnmatched = { fg = p.subtle },
   }
   return highlights
 end

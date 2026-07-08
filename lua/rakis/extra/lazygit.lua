@@ -13,26 +13,26 @@ gui:
     border: rounded
     theme:
         activeBorderColor:
-            - "${magenta03}"
+            - "${spice}"
         inactiveBorderColor:
-            - "${base01}"
+            - "${subtle}"
         searchingActiveBorderColor:
-            - "${cyan03}"
+            - "${water}"
         optionsTextColor:
-            - "${bg_highlight}"
+            - "${muted}"
         selectedLineBgColor:
-            - "${bg_highlight}"
+            - "${highlight}"
         cherryPickedCommitBgColor:
-            - "${bg_highlight}"
+            - "${highlight}"
         cherryPickedCommitFgColor:
-            - "${red01}"
+            - "${blood_bright}"
         unstagedChangesColor:
-            - "${yellow02}"
+            - "${glowglobe}"
         defaultFgColor:
-            - "${fg}"
+            - "${text}"
 ]==]
 
-  return util.parse_extra_template(template, colors[variant])
+  return util.parse_extra_template(template, util.with_terminal_brights(colors[variant]))
 end
 
 return M

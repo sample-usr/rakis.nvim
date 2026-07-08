@@ -9,57 +9,57 @@ function M.get(opts, p)
   opts = opts or {}
   local highlights = {
     -- Primary colors
-    DiffviewPrimary = { fg = p.blue03 },
-    DiffviewSecondary = { fg = p.cyan03 },
+    DiffviewPrimary = { fg = p.ibad },
+    DiffviewSecondary = { fg = p.water },
 
     -- Window
-    DiffviewNormal = { fg = p.fg, bg = p.bg_highlight },
-    DiffviewCursorLine = { bg = p.bg_highlight },
-    DiffviewVertSplit = { fg = p.bg_highlight },
-    DiffviewWinSeparator = { fg = p.bg_highlight },
-    DiffviewSignColumn = { bg = p.bg_highlight },
-    DiffviewStatusLine = { fg = p.fg, bg = p.bg },
-    DiffviewStatusLineNC = { fg = p.base01, bg = p.bg },
-    DiffviewEndOfBuffer = { fg = p.bg_highlight },
+    DiffviewNormal = { fg = p.text, bg = p.highlight },
+    DiffviewCursorLine = { bg = p.highlight },
+    DiffviewVertSplit = { fg = p.highlight },
+    DiffviewWinSeparator = { fg = p.highlight },
+    DiffviewSignColumn = { bg = p.highlight },
+    DiffviewStatusLine = { fg = p.text, bg = p.bg },
+    DiffviewStatusLineNC = { fg = p.subtle, bg = p.bg },
+    DiffviewEndOfBuffer = { fg = p.highlight },
 
     -- File panel
-    DiffviewFilePanelTitle = { fg = p.cyan03, bold = true },
-    DiffviewFilePanelCounter = { fg = p.orange03 },
-    DiffviewFilePanelRootPath = { fg = p.cyan03, bold = true },
-    DiffviewFilePanelFileName = { fg = p.fg },
-    DiffviewFilePanelSelected = { fg = p.yellow03, bold = true },
-    DiffviewFilePanelPath = { fg = p.base01 },
-    DiffviewFilePanelInsertions = { fg = p.green03 },
-    DiffviewFilePanelDeletions = { fg = p.red03 },
-    DiffviewFilePanelConflicts = { fg = p.orange03 },
+    DiffviewFilePanelTitle = { fg = p.water, bold = true },
+    DiffviewFilePanelCounter = { fg = p.spice },
+    DiffviewFilePanelRootPath = { fg = p.water, bold = true },
+    DiffviewFilePanelFileName = { fg = p.text },
+    DiffviewFilePanelSelected = { fg = p.glowglobe, bold = true },
+    DiffviewFilePanelPath = { fg = p.subtle },
+    DiffviewFilePanelInsertions = { fg = p.oasis },
+    DiffviewFilePanelDeletions = { fg = p.blood },
+    DiffviewFilePanelConflicts = { fg = p.spice },
 
     -- Folder
-    DiffviewFolderName = { fg = p.cyan03, bold = true },
-    DiffviewFolderSign = { fg = p.base01 },
+    DiffviewFolderName = { fg = p.water, bold = true },
+    DiffviewFolderSign = { fg = p.subtle },
 
     -- References
-    DiffviewHash = { fg = p.orange03 },
-    DiffviewReference = { fg = p.violet03, bold = true },
-    DiffviewReflogSelector = { fg = p.orange03 },
+    DiffviewHash = { fg = p.spice },
+    DiffviewReference = { fg = p.dusk, bold = true },
+    DiffviewReflogSelector = { fg = p.spice },
 
     -- Status
-    DiffviewStatusAdded = { fg = p.green03 },
-    DiffviewStatusUntracked = { fg = p.cyan03 },
-    DiffviewStatusModified = { fg = p.yellow03 },
-    DiffviewStatusRenamed = { fg = p.violet03 },
-    DiffviewStatusCopied = { fg = p.cyan03 },
-    DiffviewStatusTypeChange = { fg = p.yellow03 },
-    DiffviewStatusUnmerged = { fg = p.orange03 },
-    DiffviewStatusUnknown = { fg = p.base01 },
-    DiffviewStatusDeleted = { fg = p.red03 },
-    DiffviewStatusBroken = { fg = p.red03 },
-    DiffviewStatusIgnored = { fg = p.base01 },
+    DiffviewStatusAdded = { fg = p.oasis },
+    DiffviewStatusUntracked = { fg = p.water },
+    DiffviewStatusModified = { fg = p.glowglobe },
+    DiffviewStatusRenamed = { fg = p.dusk },
+    DiffviewStatusCopied = { fg = p.water },
+    DiffviewStatusTypeChange = { fg = p.glowglobe },
+    DiffviewStatusUnmerged = { fg = p.spice },
+    DiffviewStatusUnknown = { fg = p.subtle },
+    DiffviewStatusDeleted = { fg = p.blood },
+    DiffviewStatusBroken = { fg = p.blood },
+    DiffviewStatusIgnored = { fg = p.subtle },
 
     -- Diff highlighting
-    DiffviewDiffAdd = { bg = util.blend(p.bg_solid, p.green03, 0.8) },
-    DiffviewDiffChange = { bg = util.blend(p.bg_solid, p.blue03, 0.8) },
-    DiffviewDiffDelete = { bg = util.blend(p.bg_solid, p.red03, 0.8) },
-    DiffviewDiffText = { bg = util.blend(p.bg_solid, p.yellow03, 0.7) },
+    DiffviewDiffAdd = { bg = util.blend(p.bg_solid, p.oasis, 0.8) },
+    DiffviewDiffChange = { bg = util.blend(p.bg_solid, p.ibad, 0.8) },
+    DiffviewDiffDelete = { bg = util.blend(p.bg_solid, p.blood, 0.8) },
+    DiffviewDiffText = { bg = util.blend(p.bg_solid, p.glowglobe, 0.7) },
   }
   return highlights
 end

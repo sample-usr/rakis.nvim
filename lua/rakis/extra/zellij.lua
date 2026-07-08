@@ -10,16 +10,16 @@ function M.generate(variant)
 themes {
      {
         bg "${bg}"
-        fg "${fg}"
-        black "${base03}"
-        red "${red03}"
-        green "${green03}"
-        yellow "${yellow03}"
-        blue "${blue03}"
-        magenta "${magenta03}"
-        cyan "${cyan03}"
-        white "${fg}"
-        orange "${orange03}"
+        fg "${text}"
+        black "${overlay}"
+        red "${blood}"
+        green "${oasis}"
+        yellow "${glowglobe}"
+        blue "${ibad}"
+        magenta "${dusk}"
+        cyan "${water}"
+        white "${text}"
+        orange "${spice}"
     }
 }
 ]==]

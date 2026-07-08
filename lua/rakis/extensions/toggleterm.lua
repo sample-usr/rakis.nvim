@@ -9,14 +9,14 @@ function M.get(opts, p)
   local highlights = {
     -- Terminal window
     ToggleTerm = { bg = p.bg },
-    ToggleTermBorder = { fg = p.bg_highlight, bg = p.bg },
-    ToggleTermNormal = { fg = p.fg, bg = p.bg },
-    ToggleTermNormalFloat = { fg = p.fg, bg = p.bg },
-    ToggleTermFloatBorder = { fg = p.bg_highlight, bg = p.bg },
+    ToggleTermBorder = { fg = p.highlight, bg = p.bg },
+    ToggleTermNormal = { fg = p.text, bg = p.bg },
+    ToggleTermNormalFloat = { fg = p.text, bg = p.bg },
+    ToggleTermFloatBorder = { fg = p.highlight, bg = p.bg },
 
     -- Terminal cursor
-    TermCursor = { fg = p.bg, bg = p.fg },
-    TermCursorNC = { fg = p.bg, bg = p.base01 },
+    TermCursor = { fg = p.bg, bg = p.text },
+    TermCursorNC = { fg = p.bg, bg = p.subtle },
   }
   return highlights
 end

@@ -24,7 +24,7 @@ function M.setup()
   ---@type RakisPalette
   t = vim.tbl_deep_extend("force", t, opts.theme.colors)
 
-  t.bg_solid = t.bg ~= "NONE" and t.bg or t.bg_secondary
+  t.bg_solid = t.bg ~= "NONE" and t.bg or t.surface
   if opts.transparent then
     t.bg = "NONE"
   end
@@ -47,29 +47,31 @@ function M.setup()
   end
 
   if opts.terminal_colors then
-    vim.g.terminal_color_0 = t.bg
-    vim.g.terminal_color_8 = t.bg_secondary
+    local bright = require("rakis.util").with_terminal_brights(t)
 
-    vim.g.terminal_color_7 = t.fg
-    vim.g.terminal_color_15 = t.base01
+    vim.g.terminal_color_0 = t.bg_solid
+    vim.g.terminal_color_8 = t.muted
 
-    vim.g.terminal_color_1 = t.red03
-    vim.g.terminal_color_9 = t.red01
+    vim.g.terminal_color_7 = t.text
+    vim.g.terminal_color_15 = bright.text_bright
 
-    vim.g.terminal_color_2 = t.green03
-    vim.g.terminal_color_10 = t.green01
+    vim.g.terminal_color_1 = t.blood
+    vim.g.terminal_color_9 = bright.blood_bright
 
-    vim.g.terminal_color_3 = t.yellow03
-    vim.g.terminal_color_11 = t.yellow01
+    vim.g.terminal_color_2 = t.oasis
+    vim.g.terminal_color_10 = bright.oasis_bright
 
-    vim.g.terminal_color_4 = t.blue03
-    vim.g.terminal_color_12 = t.blue01
+    vim.g.terminal_color_3 = t.glowglobe
+    vim.g.terminal_color_11 = bright.glowglobe_bright
 
-    vim.g.terminal_color_5 = t.violet03
-    vim.g.terminal_color_13 = t.violet01
+    vim.g.terminal_color_4 = t.ibad
+    vim.g.terminal_color_12 = bright.ibad_bright
 
-    vim.g.terminal_color_6 = t.cyan03
-    vim.g.terminal_color_14 = t.cyan01
+    vim.g.terminal_color_5 = t.dusk
+    vim.g.terminal_color_13 = bright.dusk_bright
+
+    vim.g.terminal_color_6 = t.water
+    vim.g.terminal_color_14 = bright.water_bright
   end
 
   -- Load base theme

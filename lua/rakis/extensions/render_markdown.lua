@@ -9,36 +9,36 @@ function M.get(opts, p)
   opts = opts or {}
   local highlights = {
     -- Headings with backgrounds
-    RenderMarkdownH1Bg = { bg = util.blend(p.bg_solid, p.blue03, 0.8) },
-    RenderMarkdownH2Bg = { bg = util.blend(p.bg_solid, p.cyan03, 0.8) },
-    RenderMarkdownH3Bg = { bg = util.blend(p.bg_solid, p.blue02, 0.8) },
-    RenderMarkdownH4Bg = { bg = util.blend(p.bg_solid, p.violet03, 0.8) },
-    RenderMarkdownH5Bg = { bg = util.blend(p.bg_solid, p.violet02, 0.8) },
-    RenderMarkdownH6Bg = { bg = util.blend(p.bg_solid, p.green03, 0.8) },
+    RenderMarkdownH1Bg = { bg = util.blend(p.bg_solid, p.ibad, 0.8) },
+    RenderMarkdownH2Bg = { bg = util.blend(p.bg_solid, p.water, 0.8) },
+    RenderMarkdownH3Bg = { bg = util.blend(p.bg_solid, p.ibad, 0.8) },
+    RenderMarkdownH4Bg = { bg = util.blend(p.bg_solid, p.dusk, 0.8) },
+    RenderMarkdownH5Bg = { bg = util.blend(p.bg_solid, p.dusk, 0.8) },
+    RenderMarkdownH6Bg = { bg = util.blend(p.bg_solid, p.oasis, 0.8) },
 
     -- Code blocks
-    RenderMarkdownCode = { bg = p.bg_highlight },
-    RenderMarkdownCodeInline = { fg = p.cyan03, bg = p.bg_highlight },
+    RenderMarkdownCode = { bg = p.highlight },
+    RenderMarkdownCodeInline = { fg = p.water, bg = p.highlight },
 
     -- Lists
-    RenderMarkdownBullet = { fg = p.orange03 },
-    RenderMarkdownChecked = { fg = p.green02, bold = true },
-    RenderMarkdownUnchecked = { fg = p.magenta03, bold = true },
+    RenderMarkdownBullet = { fg = p.spice },
+    RenderMarkdownChecked = { fg = p.oasis, bold = true },
+    RenderMarkdownUnchecked = { fg = p.bloom, bold = true },
 
     -- Quotes and separators
-    RenderMarkdownQuote = { fg = p.base01, italic = true },
-    RenderMarkdownDash = { fg = p.base01 },
+    RenderMarkdownQuote = { fg = p.subtle, italic = true },
+    RenderMarkdownDash = { fg = p.subtle },
 
     -- Tables
-    RenderMarkdownTableHead = { fg = p.cyan03, bold = true },
-    RenderMarkdownTableRow = { fg = p.base01 },
+    RenderMarkdownTableHead = { fg = p.water, bold = true },
+    RenderMarkdownTableRow = { fg = p.subtle },
     RenderMarkdownTableFill = { link = "Conceal" },
 
     -- Links (not usually styled, use default markdown)
-    RenderMarkdownLink = { fg = p.blue03, underline = true },
+    RenderMarkdownLink = { fg = p.ibad, underline = true },
 
     -- Misc
-    RenderMarkdownSign = { fg = p.base01 },
+    RenderMarkdownSign = { fg = p.subtle },
   }
   return highlights
 end

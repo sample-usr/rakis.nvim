@@ -7,19 +7,19 @@ function M.get(options, p)
   options = options or {}
 
   local highlights = {
-    DashboardHeader = { fg = p.orange03 },
-    DashboardFooter = { fg = p.cyan03 },
-    DashboardShortCut = { fg = p.base02 },
-    DashboardDesc = { fg = p.orange02 },
-    DashboardKey = { fg = p.magenta03 },
-    DashboardIcon = { fg = p.magenta03 },
-    DashboardProjectTitle = { fg = p.yellow03 },
-    DashboardProjectTitleIcon = { fg = p.yellow03 },
-    DashboardProjectIcon = { fg = p.magenta03 },
-    DashboardMruTitle = { fg = p.cyan01 },
-    DashboardMruIcon = { fg = p.cyan01 },
-    DashboardFiles = { fg = p.cyan01 },
-    DashboardShortCutIcon = { fg = p.base02 },
+    DashboardHeader = { fg = p.spice },
+    DashboardFooter = { fg = p.water },
+    DashboardShortCut = { fg = p.muted },
+    DashboardDesc = { fg = p.spice },
+    DashboardKey = { fg = p.bloom },
+    DashboardIcon = { fg = p.bloom },
+    DashboardProjectTitle = { fg = p.glowglobe },
+    DashboardProjectTitleIcon = { fg = p.glowglobe },
+    DashboardProjectIcon = { fg = p.bloom },
+    DashboardMruTitle = { fg = p.water },
+    DashboardMruIcon = { fg = p.water },
+    DashboardFiles = { fg = p.water },
+    DashboardShortCutIcon = { fg = p.muted },
   }
 
   return highlights

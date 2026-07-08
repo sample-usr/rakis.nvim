@@ -8,42 +8,42 @@ function M.get(opts, p)
   opts = opts or {}
   local highlights = {
     -- Current buffer
-    BufferCurrent = { fg = p.fg, bg = p.bg_highlight },
-    BufferCurrentIndex = { fg = p.fg, bg = p.bg_highlight },
-    BufferCurrentMod = { fg = p.cyan03, bg = p.bg_highlight },
-    BufferCurrentSign = { fg = p.base01, bg = p.bg_highlight },
-    BufferCurrentTarget = { fg = p.yellow03, bg = p.bg_highlight },
-    BufferCurrentIcon = { bg = p.bg_highlight },
+    BufferCurrent = { fg = p.text, bg = p.highlight },
+    BufferCurrentIndex = { fg = p.text, bg = p.highlight },
+    BufferCurrentMod = { fg = p.water, bg = p.highlight },
+    BufferCurrentSign = { fg = p.subtle, bg = p.highlight },
+    BufferCurrentTarget = { fg = p.glowglobe, bg = p.highlight },
+    BufferCurrentIcon = { bg = p.highlight },
 
     -- Visible buffers
-    BufferVisible = { fg = p.base01, bg = p.bg },
-    BufferVisibleIndex = { fg = p.base01, bg = p.bg },
-    BufferVisibleMod = { fg = p.cyan03, bg = p.bg },
-    BufferVisibleSign = { fg = p.base02, bg = p.bg },
-    BufferVisibleTarget = { fg = p.yellow03, bg = p.bg },
+    BufferVisible = { fg = p.subtle, bg = p.bg },
+    BufferVisibleIndex = { fg = p.subtle, bg = p.bg },
+    BufferVisibleMod = { fg = p.water, bg = p.bg },
+    BufferVisibleSign = { fg = p.muted, bg = p.bg },
+    BufferVisibleTarget = { fg = p.glowglobe, bg = p.bg },
     BufferVisibleIcon = { bg = p.bg },
 
     -- Inactive buffers
-    BufferInactive = { fg = p.base01, bg = p.bg },
-    BufferInactiveIndex = { fg = p.base01, bg = p.bg },
-    BufferInactiveMod = { fg = p.cyan03, bg = p.bg },
-    BufferInactiveSign = { fg = p.base02, bg = p.bg },
-    BufferInactiveTarget = { fg = p.yellow03, bg = p.bg },
+    BufferInactive = { fg = p.subtle, bg = p.bg },
+    BufferInactiveIndex = { fg = p.subtle, bg = p.bg },
+    BufferInactiveMod = { fg = p.water, bg = p.bg },
+    BufferInactiveSign = { fg = p.muted, bg = p.bg },
+    BufferInactiveTarget = { fg = p.glowglobe, bg = p.bg },
     BufferInactiveIcon = { bg = p.bg },
 
     -- Tab pages
     BufferTabpageFill = { bg = p.bg },
-    BufferTabpages = { fg = p.cyan03, bg = p.bg, bold = true },
+    BufferTabpages = { fg = p.water, bg = p.bg, bold = true },
 
     -- Scrolling
-    BufferOffset = { fg = p.cyan03, bg = p.bg, bold = true },
+    BufferOffset = { fg = p.water, bg = p.bg, bold = true },
 
     -- Alternate buffer
-    BufferAlternate = { fg = p.base01, bg = p.bg },
-    BufferAlternateIndex = { fg = p.base01, bg = p.bg },
-    BufferAlternateMod = { fg = p.cyan03, bg = p.bg },
-    BufferAlternateSign = { fg = p.base02, bg = p.bg },
-    BufferAlternateTarget = { fg = p.yellow03, bg = p.bg },
+    BufferAlternate = { fg = p.subtle, bg = p.bg },
+    BufferAlternateIndex = { fg = p.subtle, bg = p.bg },
+    BufferAlternateMod = { fg = p.water, bg = p.bg },
+    BufferAlternateSign = { fg = p.muted, bg = p.bg },
+    BufferAlternateTarget = { fg = p.glowglobe, bg = p.bg },
   }
   return highlights
 end

@@ -7,13 +7,13 @@ local M = {}
 function M.get(opts, p)
   opts = opts or {}
   local highlights = {
-    RainbowDelimiterRed = { fg = p.red03 },
-    RainbowDelimiterYellow = { fg = p.yellow03 },
-    RainbowDelimiterBlue = { fg = p.blue03 },
-    RainbowDelimiterOrange = { fg = p.orange03 },
-    RainbowDelimiterGreen = { fg = p.green03 },
-    RainbowDelimiterViolet = { fg = p.violet03 },
-    RainbowDelimiterCyan = { fg = p.cyan03 },
+    RainbowDelimiterRed = { fg = p.blood },
+    RainbowDelimiterYellow = { fg = p.glowglobe },
+    RainbowDelimiterBlue = { fg = p.ibad },
+    RainbowDelimiterOrange = { fg = p.spice },
+    RainbowDelimiterGreen = { fg = p.oasis },
+    RainbowDelimiterViolet = { fg = p.dusk },
+    RainbowDelimiterCyan = { fg = p.water },
   }
   return highlights
 end

@@ -8,45 +8,45 @@ function M.get(opts, p)
   opts = opts or {}
   local highlights = {
     -- Window
-    FzfLuaNormal = { fg = p.fg, bg = p.bg },
-    FzfLuaBorder = { fg = p.bg_highlight, bg = p.bg },
-    FzfLuaTitle = { fg = p.cyan03, bg = p.bg, bold = true },
-    FzfLuaPreviewNormal = { fg = p.fg, bg = p.bg },
-    FzfLuaPreviewBorder = { fg = p.bg_highlight, bg = p.bg },
-    FzfLuaPreviewTitle = { fg = p.cyan03, bg = p.bg, bold = true },
+    FzfLuaNormal = { fg = p.text, bg = p.bg },
+    FzfLuaBorder = { fg = p.highlight, bg = p.bg },
+    FzfLuaTitle = { fg = p.water, bg = p.bg, bold = true },
+    FzfLuaPreviewNormal = { fg = p.text, bg = p.bg },
+    FzfLuaPreviewBorder = { fg = p.highlight, bg = p.bg },
+    FzfLuaPreviewTitle = { fg = p.water, bg = p.bg, bold = true },
 
     -- Cursor
-    FzfLuaCursor = { fg = p.bg, bg = p.fg },
-    FzfLuaCursorLine = { fg = p.fg, bg = p.bg_highlight },
-    FzfLuaCursorLineNr = { fg = p.orange03, bg = p.bg_highlight },
+    FzfLuaCursor = { fg = p.bg, bg = p.text },
+    FzfLuaCursorLine = { fg = p.text, bg = p.highlight },
+    FzfLuaCursorLineNr = { fg = p.spice, bg = p.highlight },
 
     -- Search
-    FzfLuaSearch = { fg = p.yellow03, bg = p.bg },
-    FzfLuaHeaderBind = { fg = p.orange03 },
-    FzfLuaHeaderText = { fg = p.cyan03 },
+    FzfLuaSearch = { fg = p.glowglobe, bg = p.bg },
+    FzfLuaHeaderBind = { fg = p.spice },
+    FzfLuaHeaderText = { fg = p.water },
 
     -- File info
-    FzfLuaPath = { fg = p.base01 },
-    FzfLuaFilePart = { fg = p.fg },
-    FzfLuaDirPart = { fg = p.cyan03 },
+    FzfLuaPath = { fg = p.subtle },
+    FzfLuaFilePart = { fg = p.text },
+    FzfLuaDirPart = { fg = p.water },
 
     -- Buffer flags
-    FzfLuaBufFlagCur = { fg = p.orange03 },
-    FzfLuaBufFlagAlt = { fg = p.base01 },
+    FzfLuaBufFlagCur = { fg = p.spice },
+    FzfLuaBufFlagAlt = { fg = p.subtle },
 
     -- Tab line
-    FzfLuaTabTitle = { fg = p.cyan03, bold = true },
-    FzfLuaTabMarker = { fg = p.orange03 },
+    FzfLuaTabTitle = { fg = p.water, bold = true },
+    FzfLuaTabMarker = { fg = p.spice },
 
     -- Scrollbar
-    FzfLuaScrollBorderEmpty = { fg = p.bg_highlight },
-    FzfLuaScrollBorderFull = { fg = p.cyan03 },
-    FzfLuaScrollFloatEmpty = { fg = p.bg_highlight },
-    FzfLuaScrollFloatFull = { fg = p.cyan03 },
+    FzfLuaScrollBorderEmpty = { fg = p.highlight },
+    FzfLuaScrollBorderFull = { fg = p.water },
+    FzfLuaScrollFloatEmpty = { fg = p.highlight },
+    FzfLuaScrollFloatFull = { fg = p.water },
 
     -- Help
-    FzfLuaHelpNormal = { fg = p.fg, bg = p.bg },
-    FzfLuaHelpBorder = { fg = p.bg_highlight, bg = p.bg },
+    FzfLuaHelpNormal = { fg = p.text, bg = p.bg },
+    FzfLuaHelpBorder = { fg = p.highlight, bg = p.bg },
   }
   return highlights
 end

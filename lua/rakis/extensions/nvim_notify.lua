@@ -6,21 +6,21 @@ local M = {}
 function M.get(options, p)
   options = options or {}
   local highlights = {
-    NotifyERRORBorder = { fg = p.red02 },
-    NotifyWARNBorder = { fg = p.yellow02 },
-    NotifyINFOBorder = { fg = p.green02 },
-    NotifyDEBUGBorder = { fg = p.cyan02 },
-    NotifyTRACEBorder = { fg = p.violet02 },
-    NotifyERRORIcon = { fg = p.red02 },
-    NotifyWARNIcon = { fg = p.yellow02 },
-    NotifyINFOIcon = { fg = p.green02 },
-    NotifyDEBUGIcon = { fg = p.cyan02 },
-    NotifyTRACEIcon = { fg = p.violet02 },
-    NotifyERRORTitle = { fg = p.red02 },
-    NotifyWARNTitle = { fg = p.yellow02 },
-    NotifyINFOTitle = { fg = p.green02 },
-    NotifyDEBUGTitle = { fg = p.cyan02 },
-    NotifyTRACETitle = { fg = p.violet02 },
+    NotifyERRORBorder = { fg = p.blood },
+    NotifyWARNBorder = { fg = p.glowglobe },
+    NotifyINFOBorder = { fg = p.oasis },
+    NotifyDEBUGBorder = { fg = p.water },
+    NotifyTRACEBorder = { fg = p.dusk },
+    NotifyERRORIcon = { fg = p.blood },
+    NotifyWARNIcon = { fg = p.glowglobe },
+    NotifyINFOIcon = { fg = p.oasis },
+    NotifyDEBUGIcon = { fg = p.water },
+    NotifyTRACEIcon = { fg = p.dusk },
+    NotifyERRORTitle = { fg = p.blood },
+    NotifyWARNTitle = { fg = p.glowglobe },
+    NotifyINFOTitle = { fg = p.oasis },
+    NotifyDEBUGTitle = { fg = p.water },
+    NotifyTRACETitle = { fg = p.dusk },
   }
 
   return highlights

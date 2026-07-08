@@ -8,64 +8,64 @@ function M.get(opts, p)
   opts = opts or {}
   local highlights = {
     -- Folders
-    NvimTreeFolderName = { fg = p.cyan03 },
-    NvimTreeOpenedFolderName = { fg = p.cyan01, bold = true },
-    NvimTreeEmptyFolderName = { fg = p.base01 },
-    NvimTreeFolderIcon = { fg = p.cyan03 },
-    NvimTreeRootFolder = { fg = p.cyan03, bold = true },
+    NvimTreeFolderName = { fg = p.water },
+    NvimTreeOpenedFolderName = { fg = p.water, bold = true },
+    NvimTreeEmptyFolderName = { fg = p.subtle },
+    NvimTreeFolderIcon = { fg = p.water },
+    NvimTreeRootFolder = { fg = p.water, bold = true },
 
     -- Files
-    NvimTreeExecFile = { fg = p.green03, bold = true },
-    NvimTreeImageFile = { fg = p.violet03 },
-    NvimTreeSpecialFile = { fg = p.yellow03 },
-    NvimTreeSymlink = { fg = p.violet03 },
-    NvimTreeOpenedFile = { fg = p.fg, bg = p.bg_highlight },
+    NvimTreeExecFile = { fg = p.oasis, bold = true },
+    NvimTreeImageFile = { fg = p.dusk },
+    NvimTreeSpecialFile = { fg = p.glowglobe },
+    NvimTreeSymlink = { fg = p.dusk },
+    NvimTreeOpenedFile = { fg = p.text, bg = p.highlight },
 
     -- Git
-    NvimTreeGitDirty = { fg = p.yellow03 },
-    NvimTreeGitStaged = { fg = p.green03 },
-    NvimTreeGitMerge = { fg = p.orange03 },
-    NvimTreeGitRenamed = { fg = p.violet03 },
-    NvimTreeGitNew = { fg = p.green03 },
-    NvimTreeGitDeleted = { fg = p.red03 },
-    NvimTreeGitIgnored = { fg = p.base01 },
+    NvimTreeGitDirty = { fg = p.glowglobe },
+    NvimTreeGitStaged = { fg = p.oasis },
+    NvimTreeGitMerge = { fg = p.spice },
+    NvimTreeGitRenamed = { fg = p.dusk },
+    NvimTreeGitNew = { fg = p.oasis },
+    NvimTreeGitDeleted = { fg = p.blood },
+    NvimTreeGitIgnored = { fg = p.subtle },
 
     -- File status
-    NvimTreeFileDeleted = { fg = p.red03 },
-    NvimTreeFileDirty = { fg = p.yellow03 },
-    NvimTreeFileMerge = { fg = p.orange03 },
-    NvimTreeFileNew = { fg = p.green03 },
-    NvimTreeFileRenamed = { fg = p.violet03 },
-    NvimTreeFileStaged = { fg = p.green03 },
+    NvimTreeFileDeleted = { fg = p.blood },
+    NvimTreeFileDirty = { fg = p.glowglobe },
+    NvimTreeFileMerge = { fg = p.spice },
+    NvimTreeFileNew = { fg = p.oasis },
+    NvimTreeFileRenamed = { fg = p.dusk },
+    NvimTreeFileStaged = { fg = p.oasis },
 
     -- UI elements
-    NvimTreeNormal = { fg = p.fg, bg = p.bg },
-    NvimTreeNormalNC = { fg = p.fg, bg = p.bg },
+    NvimTreeNormal = { fg = p.text, bg = p.bg },
+    NvimTreeNormalNC = { fg = p.text, bg = p.bg },
     NvimTreeEndOfBuffer = { fg = p.bg },
-    NvimTreeCursorLine = { bg = p.bg_highlight },
-    NvimTreeVertSplit = { fg = p.bg_highlight, bg = p.bg },
-    NvimTreeWinSeparator = { fg = p.bg_highlight, bg = p.bg },
+    NvimTreeCursorLine = { bg = p.highlight },
+    NvimTreeVertSplit = { fg = p.highlight, bg = p.bg },
+    NvimTreeWinSeparator = { fg = p.highlight, bg = p.bg },
     NvimTreeStatusLine = { fg = p.bg, bg = p.bg },
     NvimTreeStatusLineNC = { fg = p.bg, bg = p.bg },
 
     -- Window picker
-    NvimTreeWindowPicker = { fg = p.bg, bg = p.cyan03, bold = true },
+    NvimTreeWindowPicker = { fg = p.bg, bg = p.water, bold = true },
 
     -- Indent markers
-    NvimTreeIndentMarker = { fg = p.bg_highlight },
+    NvimTreeIndentMarker = { fg = p.highlight },
 
     -- LSP diagnostics
-    NvimTreeLspDiagnosticsError = { fg = p.red02 },
-    NvimTreeLspDiagnosticsWarning = { fg = p.yellow02 },
-    NvimTreeLspDiagnosticsInformation = { fg = p.blue02 },
-    NvimTreeLspDiagnosticsHint = { fg = p.cyan02 },
+    NvimTreeLspDiagnosticsError = { fg = p.blood },
+    NvimTreeLspDiagnosticsWarning = { fg = p.glowglobe },
+    NvimTreeLspDiagnosticsInformation = { fg = p.ibad },
+    NvimTreeLspDiagnosticsHint = { fg = p.water },
 
     -- Bookmarks
-    NvimTreeBookmark = { fg = p.violet03 },
+    NvimTreeBookmark = { fg = p.dusk },
 
     -- Clipboard
-    NvimTreeCopiedHL = { fg = p.green03, bold = true },
-    NvimTreeCutHL = { fg = p.red03, bold = true },
+    NvimTreeCopiedHL = { fg = p.oasis, bold = true },
+    NvimTreeCutHL = { fg = p.blood, bold = true },
   }
   return highlights
 end

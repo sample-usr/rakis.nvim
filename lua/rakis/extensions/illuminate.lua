@@ -10,8 +10,8 @@ function M.get(opts, p)
     IlluminatedWordText = { link = "LspReferenceText" },
     IlluminatedWordRead = { link = "LspReferenceRead" },
     IlluminatedWordWrite = { link = "LspReferenceWrite" },
-    IlluminatedWord = { bg = p.bg_highlight },
-    IlluminatedCurWord = { bg = p.bg_highlight },
+    IlluminatedWord = { bg = p.highlight },
+    IlluminatedCurWord = { bg = p.highlight },
   }
   return highlights
 end

@@ -8,26 +8,26 @@ function M.generate(variant)
   local template = [==[
 -- rakis theme for wezterm
 return {
-    foreground = "${fg}",
+    foreground = "${text}",
     background = "${bg}",
 
-    cursor_bg = "${fg}",
+    cursor_bg = "${text}",
     cursor_fg = "${bg}",
-    cursor_border = "${fg}",
+    cursor_border = "${text}",
 
-    selection_fg = "${fg}",
-    selection_bg = "${bg_highlight}",
+    selection_fg = "${text}",
+    selection_bg = "${highlight}",
 
     scrollbar_thumb = "${bg}",
     split = "${bg}",
 
-    ansi = { "${bg}", "${red03}", "${green03}", "${yellow03}", "${blue03}", "${violet03}", "${cyan03}", "${fg}" },
-    brights = { "${terminal_fg_bright}", "${red01}", "${green01}", "${yellow01}", "${blue01}", "${violet01}", "${cyan01}", "${fg}" },
-    indexed = { [16] = "${orange03}", [17] = "${red03}" },
+    ansi = { "${bg}", "${blood}", "${oasis}", "${glowglobe}", "${ibad}", "${dusk}", "${water}", "${text_bright}" },
+    brights = { "${subtle}", "${blood_bright}", "${oasis_bright}", "${glowglobe_bright}", "${ibad_bright}", "${dusk_bright}", "${water_bright}", "${text_bright}" },
+    indexed = { [16] = "${spice}", [17] = "${blood}" },
 }
 ]==]
 
-  return util.parse_extra_template(template, colors[variant])
+  return util.parse_extra_template(template, util.with_terminal_brights(colors[variant]))
 end
 
 return M

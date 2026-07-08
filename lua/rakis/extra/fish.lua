@@ -22,38 +22,38 @@ end
 --- Generate the theme for fish.
 --- @param variant string: Variation of the colorscheme to use.
 function M.generate(variant)
-  local t = format_colors(colors[variant])
+  local t = format_colors(util.with_terminal_brights(colors[variant]))
   local template = [==[
 # name: 'rakis'
 # url: 'https://github.com/sample-usr/rakis.nvim'
 # preferred_background: ${bg}
 
-fish_color_normal ${fg}
-fish_color_command ${cyan03}
-fish_color_param ${violet03}
-fish_color_keyword ${green03}
-fish_color_quote ${yellow03}
-fish_color_redirection ${blue03}
-fish_color_end ${violet03}
-fish_color_comment ${base01}
-fish_color_error ${red03}
-fish_color_gray ${base01}
-fish_color_selection --background=${bg_highlight}
-fish_color_search_match --background=${bg_highlight}
-fish_color_option ${yellow03}
-fish_color_operator ${blue03}
-fish_color_escape ${violet03}
-fish_color_autosuggestion ${base01}
-fish_color_cancel ${red03}
-fish_color_cwd ${orange03}
-fish_color_user ${violet01}
-fish_color_host ${green03}
-fish_color_host_remote ${yellow03}
-fish_color_status ${red03}
-fish_pager_color_progress ${base01}
-fish_pager_color_prefix ${blue03}
-fish_pager_color_completion ${fg}
-fish_pager_color_description ${base01}
+fish_color_normal ${text}
+fish_color_command ${water}
+fish_color_param ${dusk}
+fish_color_keyword ${oasis}
+fish_color_quote ${glowglobe}
+fish_color_redirection ${ibad}
+fish_color_end ${dusk}
+fish_color_comment ${subtle}
+fish_color_error ${blood}
+fish_color_gray ${subtle}
+fish_color_selection --background=${highlight}
+fish_color_search_match --background=${highlight}
+fish_color_option ${glowglobe}
+fish_color_operator ${ibad}
+fish_color_escape ${dusk}
+fish_color_autosuggestion ${subtle}
+fish_color_cancel ${blood}
+fish_color_cwd ${spice}
+fish_color_user ${dusk_bright}
+fish_color_host ${oasis}
+fish_color_host_remote ${glowglobe}
+fish_color_status ${blood}
+fish_pager_color_progress ${subtle}
+fish_pager_color_prefix ${ibad}
+fish_pager_color_completion ${text}
+fish_pager_color_description ${subtle}
 ]==]
 
   return util.parse_extra_template(template, t)

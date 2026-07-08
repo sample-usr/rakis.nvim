@@ -63,7 +63,7 @@ end
 function M.hslToHex(h, s, l)
   local r, g, b = M.hslToRgb(h / 360, s / 100, l / 100)
 
-  return string.format("#%02x%02x%02x", r, g, b)
+  return string.format("#%02x%02x%02x", math.floor(r + 0.5), math.floor(g + 0.5), math.floor(b + 0.5))
 end
 
 return M

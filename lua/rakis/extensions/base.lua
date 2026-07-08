@@ -7,129 +7,129 @@ local util = require("rakis.util")
 function M.get(options, p)
   options = options or {}
   local highlights = {
-    Comment = { fg = p.base01, italic = options.italic_comments }, -- any comment
-    ColorColumn = { bg = p.bg_highlight }, -- used for the columns set with 'colorcolumn'
-    Conceal = { fg = p.base02 }, -- placeholder characters substituted for concealed text (see 'conceallevel')
-    Cursor = { fg = p.bg, bg = p.fg }, -- character under the cursor
-    ICursor = { fg = p.bg, bg = p.fg }, -- the character under the cursor when |language-mapping| is used (see 'guicursor')
-    CursorIM = { fg = p.bg, bg = p.fg }, -- like Cursor, but used when in IME mode |CursorIM|
-    CursorColumn = { bg = p.bg_highlight }, -- Screen-column at the cursor, when 'cursorcolumn' is set.
-    CursorLine = { bg = p.base03, sp = p.base01 }, -- Screen-line at the cursor, when 'cursorline' is set.  Low-priority if foreground (ctermfg OR guifg) is not set.
-    Directory = { fg = p.blue03 }, -- directory names (and other special names in listings)
-    DiffAdd = { bg = util.blend(p.bg_solid, p.green03, 0.8) }, -- diff mode: Added line |diff.txt|
-    DiffChange = { bg = util.blend(p.bg_solid, p.blue03, 0.8) },
-    DiffDelete = { bg = util.blend(p.bg_solid, p.red03, 0.8) },
-    DiffText = { bg = util.blend(p.bg_solid, p.orange03, 0.8) },
-    Added = { fg = p.green01 },
-    Removed = { fg = p.red01 },
-    EndOfBuffer = { fg = p.base02 }, -- filler lines (~) after the end of the buffer.  By default, this is highlighted like |hl-NonText|.
-    ErrorMsg = { fg = p.red03 }, -- error messages on the command line
-    VertSplit = { fg = p.bg_highlight, bg = p.bg }, -- the column separating vertically split windows
-    WinSeparator = { fg = p.bg_highlight, bg = p.bg }, -- the column separating vertically split windows
-    Folded = { fg = p.base02, bg = p.bg, bold = true }, -- line used for closed folds
-    FoldColumn = { fg = p.base02, bg = p.bg },
-    SignColumn = { fg = p.base01, bg = p.bg }, -- column where |signs| are displayed
-    SignColumnSB = { fg = p.base02 }, -- column where |signs| are displayed
-    Substitute = { fg = p.base03, bg = p.base01 }, -- |:substitute| replacement text highlighting
-    LineNr = { fg = util.blend(p.bg_highlight, p.fg, 0.8) }, -- Line number for ":number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
-    CursorLineNr = { fg = p.orange01, sp = p.base01 }, -- Like LineNr when 'cursorline' or 'relativenumber' is set for the cursor line.
-    MatchParen = { fg = p.magenta02, bg = p.bg_highlight, bold = true }, -- The character under the cursor or just before it, if it is a paired bracket, and its match. |pi_paren.txt|
-    ModeMsg = { fg = p.fg }, -- 'showmode' message (e.g., "-- INSERT -- ")
-    MsgArea = { fg = p.fg }, -- Area for messages and cmdline
-    MoreMsg = { fg = p.blue01 }, -- |more-prompt|
-    NonText = { fg = util.blend(p.bg_solid, p.base01, 0.55) }, -- '@' at the end of the window, characters from 'showbreak' and other characters that do not really exist in the text (e.g., ">" displayed when a double-wide character doesn't fit at the end of the line). See also |hl-EndOfBuffer|.
-    Normal = { fg = p.fg, bg = p.bg }, -- normal text
-    NormalNC = { fg = util.blend(p.fg, p.base02, 0.5), bg = p.bg }, -- normal text in non-current windows
-    NormalSB = { fg = p.base02, bg = p.bg }, -- normal text in sidebar
-    NormalFloat = { fg = p.fg, bg = p.bg },
-    FloatTitle = { fg = p.cyan03, bg = p.bg },
-    FloatBorder = { fg = p.bg_highlight, bg = p.bg },
-    Pmenu = { fg = p.fg, bg = p.bg },
-    PmenuSel = { fg = p.fg, bg = p.bg_highlight },
-    PmenuSbar = { fg = p.bg, bg = p.bg_highlight },
-    PmenuThumb = { fg = p.bg, bg = p.bg_highlight },
-    PmenuKind = { fg = p.cyan03, bg = p.bg },
-    PmenuKindSel = { fg = p.cyan03, bg = p.bg_highlight },
-    PmenuExtra = { fg = p.base01, bg = p.bg },
-    PmenuExtraSel = { fg = p.base01, bg = p.bg_highlight },
-    Question = { fg = p.yellow03 },
-    QuickFixLine = { bg = p.bg_highlight },
-    Search = { fg = p.bg_secondary, bg = p.fg },
-    IncSearch = { fg = p.bg_secondary, bg = p.cyan03 },
-    CurSearch = { fg = p.bg_secondary, bg = p.cyan03 },
-    SpecialKey = { fg = p.base01 },
-    SpellBad = { sp = p.red03, undercurl = true },
-    SpellCap = { sp = p.yellow03, undercurl = true },
-    SpellLocal = { sp = p.blue03, undercurl = true },
-    SpellRare = { sp = p.violet03, undercurl = true },
-    StatusLine = { fg = p.fg, bg = p.bg },
-    StatusLineNC = { fg = p.base01, bg = p.bg },
-    TabLine = { fg = p.base01, bg = p.bg },
-    TabLineFill = { fg = p.base01, bg = p.bg_highlight },
-    TabLineSel = { fg = p.fg, bg = p.bg_highlight },
-    WinBar = { fg = p.base01, bg = p.bg },
-    WinBarNC = { fg = p.base01, bg = p.bg },
-    Title = { fg = p.fg },
-    Visual = { bg = p.bg_highlight },
-    VisualNOS = { bg = p.bg_highlight },
-    WarningMsg = { fg = p.yellow03 },
-    Whitespace = { fg = p.base03 },
-    WildMenu = { fg = p.bg, bg = p.blue03 },
+    Comment = { fg = p.subtle, italic = options.italic_comments }, -- any comment
+    ColorColumn = { bg = p.overlay }, -- used for the columns set with 'colorcolumn'
+    Conceal = { fg = p.muted }, -- placeholder characters substituted for concealed text (see 'conceallevel')
+    Cursor = { fg = p.bg, bg = p.text }, -- character under the cursor
+    ICursor = { fg = p.bg, bg = p.text }, -- the character under the cursor when |language-mapping| is used (see 'guicursor')
+    CursorIM = { fg = p.bg, bg = p.text }, -- like Cursor, but used when in IME mode |CursorIM|
+    CursorColumn = { bg = p.surface }, -- Screen-column at the cursor, when 'cursorcolumn' is set.
+    CursorLine = { bg = p.surface }, -- Screen-line at the cursor, when 'cursorline' is set.  Low-priority if foreground (ctermfg OR guifg) is not set.
+    Directory = { fg = p.ibad }, -- directory names (and other special names in listings)
+    DiffAdd = { bg = util.blend(p.bg_solid, p.oasis, 0.8) }, -- diff mode: Added line |diff.txt|
+    DiffChange = { bg = util.blend(p.bg_solid, p.ibad, 0.8) },
+    DiffDelete = { bg = util.blend(p.bg_solid, p.blood, 0.8) },
+    DiffText = { bg = util.blend(p.bg_solid, p.spice, 0.8) },
+    Added = { fg = p.oasis },
+    Removed = { fg = p.blood },
+    EndOfBuffer = { fg = p.faint }, -- filler lines (~) after the end of the buffer.  By default, this is highlighted like |hl-NonText|.
+    ErrorMsg = { fg = p.blood }, -- error messages on the command line
+    VertSplit = { fg = p.overlay, bg = p.bg }, -- the column separating vertically split windows
+    WinSeparator = { fg = p.overlay, bg = p.bg }, -- the column separating vertically split windows
+    Folded = { fg = p.subtle, bg = p.overlay }, -- line used for closed folds
+    FoldColumn = { fg = p.muted, bg = p.bg },
+    SignColumn = { fg = p.muted, bg = p.bg }, -- column where |signs| are displayed
+    SignColumnSB = { fg = p.muted }, -- column where |signs| are displayed
+    Substitute = { fg = p.bg, bg = p.glowglobe }, -- |:substitute| replacement text highlighting
+    LineNr = { fg = p.muted }, -- Line number for ":number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
+    CursorLineNr = { fg = p.spice }, -- Like LineNr when 'cursorline' or 'relativenumber' is set for the cursor line.
+    MatchParen = { fg = p.glowglobe, bg = p.highlight, bold = true }, -- The character under the cursor or just before it, if it is a paired bracket, and its match. |pi_paren.txt|
+    ModeMsg = { fg = p.text }, -- 'showmode' message (e.g., "-- INSERT -- ")
+    MsgArea = { fg = p.text }, -- Area for messages and cmdline
+    MoreMsg = { fg = p.ibad }, -- |more-prompt|
+    NonText = { fg = p.faint }, -- '@' at the end of the window, characters from 'showbreak' and other characters that do not really exist in the text (e.g., ">" displayed when a double-wide character doesn't fit at the end of the line). See also |hl-EndOfBuffer|.
+    Normal = { fg = p.text, bg = p.bg }, -- normal text
+    NormalNC = { fg = util.blend(p.text, p.subtle, 0.5), bg = p.bg }, -- normal text in non-current windows
+    NormalSB = { fg = p.subtle, bg = p.surface }, -- normal text in sidebar
+    NormalFloat = { fg = p.text, bg = p.surface },
+    FloatTitle = { fg = p.spice, bg = p.surface },
+    FloatBorder = { fg = p.highlight, bg = p.surface },
+    Pmenu = { fg = p.text, bg = p.surface },
+    PmenuSel = { fg = p.text, bg = p.highlight },
+    PmenuSbar = { bg = p.overlay },
+    PmenuThumb = { bg = p.muted },
+    PmenuKind = { fg = p.water, bg = p.surface },
+    PmenuKindSel = { fg = p.water, bg = p.highlight },
+    PmenuExtra = { fg = p.subtle, bg = p.surface },
+    PmenuExtraSel = { fg = p.subtle, bg = p.highlight },
+    Question = { fg = p.glowglobe },
+    QuickFixLine = { bg = p.overlay },
+    Search = { fg = p.bg, bg = p.subtle },
+    IncSearch = { fg = p.bg, bg = p.glowglobe },
+    CurSearch = { fg = p.bg, bg = p.glowglobe },
+    SpecialKey = { fg = p.muted },
+    SpellBad = { sp = p.blood, undercurl = true },
+    SpellCap = { sp = p.glowglobe, undercurl = true },
+    SpellLocal = { sp = p.ibad, undercurl = true },
+    SpellRare = { sp = p.dusk, undercurl = true },
+    StatusLine = { fg = p.text, bg = p.surface },
+    StatusLineNC = { fg = p.muted, bg = p.surface },
+    TabLine = { fg = p.subtle, bg = p.surface },
+    TabLineFill = { bg = p.bg },
+    TabLineSel = { fg = p.text, bg = p.overlay },
+    WinBar = { fg = p.subtle, bg = p.bg },
+    WinBarNC = { fg = p.muted, bg = p.bg },
+    Title = { fg = p.spice, bold = true },
+    Visual = { bg = p.highlight },
+    VisualNOS = { bg = p.highlight },
+    WarningMsg = { fg = p.glowglobe },
+    Whitespace = { fg = p.faint },
+    WildMenu = { fg = p.bg, bg = p.ibad },
 
-    Constant = { fg = p.cyan01 }, -- (preferred) any constant
-    String = { fg = p.green01 }, --   a string constant: "this is a string"
-    Character = { fg = p.green01 }, --  a character constant: 'c', '\n'
-    Boolean = { fg = p.cyan02 }, --  a boolean constant: TRUE, false
-    Number = { fg = p.orange01 },
+    Constant = { fg = p.dusk }, -- (preferred) any constant
+    String = { fg = p.oasis }, --   a string constant: "this is a string"
+    Character = { fg = p.oasis }, --  a character constant: 'c', '\n'
+    Boolean = { fg = p.dusk }, --  a boolean constant: TRUE, false
+    Number = { fg = p.glowglobe },
 
-    Identifier = { fg = p.cyan03 }, -- (preferred) any variable name
-    Function = { fg = p.blue02 }, -- function name (also: methods for classes)
-    Statement = { fg = p.magenta02 }, -- (preferred) any statement
-    Operator = { fg = p.magenta02 }, -- "sizeof", "+", "*", etc.
-    Keyword = { fg = p.orange03 }, --  any other keyword
-    PreProc = { fg = p.cyan03 },
-    Label = { fg = p.orange02 },
+    Identifier = { fg = p.water }, -- (preferred) any variable name
+    Function = { fg = p.ibad }, -- function name (also: methods for classes)
+    Statement = { fg = p.spice }, -- (preferred) any statement
+    Operator = { fg = p.bloom }, -- "sizeof", "+", "*", etc.
+    Keyword = { fg = p.spice }, --  any other keyword
+    PreProc = { fg = p.water },
+    Label = { fg = p.spice },
 
-    Type = { fg = p.magenta03 },
+    Type = { fg = p.water },
 
-    Special = { fg = p.orange03 },
-    Delimiter = { fg = p.fg },
+    Special = { fg = p.spice },
+    Delimiter = { fg = p.muted },
 
-    Debug = { fg = p.red01 },
-    Error = { fg = p.red02 },
-    Todo = { fg = p.violet01, bold = true },
+    Debug = { fg = p.blood },
+    Error = { fg = p.blood },
+    Todo = { fg = p.dusk, bold = true },
 
-    qfLineNr = { fg = p.base01 },
-    qfFileName = { fg = p.blue03 },
+    qfLineNr = { fg = p.muted },
+    qfFileName = { fg = p.ibad },
 
-    htmlH1 = { fg = p.blue03, bold = true },
-    htmlH2 = { fg = p.blue03, bold = true },
+    htmlH1 = { fg = p.spice, bold = true },
+    htmlH2 = { fg = p.glowglobe, bold = true },
 
-    mkdCodeDelimiter = { fg = p.base01 },
-    mkdCodeStart = { fg = p.blue03 },
-    mkdCodeEnd = { fg = p.blue03 },
+    mkdCodeDelimiter = { fg = p.muted },
+    mkdCodeStart = { fg = p.water },
+    mkdCodeEnd = { fg = p.water },
 
-    markdownHeadingDelimiter = { fg = p.base01 },
-    markdownCode = { fg = p.cyan03 },
-    markdownCodeBlock = { fg = p.cyan03 },
-    markdownH1 = { fg = p.blue03, bold = true },
-    markdownH2 = { fg = p.cyan03, bold = true },
-    markdownH3 = { fg = p.blue02, bold = true },
-    markdownH4 = { fg = p.violet03, bold = true },
-    markdownH5 = { fg = p.violet02, bold = true },
-    markdownH6 = { fg = p.green03, bold = true },
-    markdownLinkText = { fg = p.blue01, underline = true },
+    markdownHeadingDelimiter = { fg = p.muted },
+    markdownCode = { fg = p.water },
+    markdownCodeBlock = { fg = p.water },
+    markdownH1 = { fg = p.spice, bold = true },
+    markdownH2 = { fg = p.glowglobe, bold = true },
+    markdownH3 = { fg = p.oasis, bold = true },
+    markdownH4 = { fg = p.water, bold = true },
+    markdownH5 = { fg = p.ibad, bold = true },
+    markdownH6 = { fg = p.dusk, bold = true },
+    markdownLinkText = { fg = p.ibad, underline = true },
 
-    LspReferenceText = { bg = p.bg_highlight },
-    LspReferenceRead = { bg = p.bg_highlight },
-    LspReferenceWrite = { bg = p.bg_highlight },
+    LspReferenceText = { bg = p.overlay },
+    LspReferenceRead = { bg = p.overlay },
+    LspReferenceWrite = { bg = p.overlay },
 
-    DiagnosticError = { fg = p.red02 },
-    DiagnosticWarn = { fg = p.yellow02 },
-    DiagnosticInfo = { fg = p.blue02 },
-    DiagnosticHint = { fg = p.cyan02 },
-    DiagnosticOk = { fg = p.green02 },
-    DiagnosticUnnecessary = { fg = p.base01 },
+    DiagnosticError = { fg = p.blood },
+    DiagnosticWarn = { fg = p.glowglobe },
+    DiagnosticInfo = { fg = p.ibad },
+    DiagnosticHint = { fg = p.water },
+    DiagnosticOk = { fg = p.oasis },
+    DiagnosticUnnecessary = { fg = p.muted },
 
     DiagnosticDefaultError = { link = "DiagnosticError" },
     DiagnosticDefaultWarn = { link = "DiagnosticWarn" },
@@ -149,27 +149,27 @@ function M.get(options, p)
     DiagnosticSignHint = { link = "DiagnosticHint" },
     DiagnosticSignOk = { link = "DiagnosticOk" },
 
-    DiagnosticVirtualTextError = { fg = p.red02, bg = util.blend(p.bg_solid, p.red02, 0.9) },
-    DiagnosticVirtualTextWarn = { fg = p.yellow02, bg = util.blend(p.bg_solid, p.yellow02, 0.9) },
-    DiagnosticVirtualTextInfo = { fg = p.blue02, bg = util.blend(p.bg_solid, p.blue02, 0.9) },
-    DiagnosticVirtualTextHint = { fg = p.cyan02, bg = util.blend(p.bg_solid, p.cyan02, 0.9) },
-    DiagnosticVirtualTextOk = { fg = p.green02, bg = util.blend(p.bg_solid, p.green02, 0.9) },
+    DiagnosticVirtualTextError = { fg = p.blood, bg = util.blend(p.bg_solid, p.blood, 0.9) },
+    DiagnosticVirtualTextWarn = { fg = p.glowglobe, bg = util.blend(p.bg_solid, p.glowglobe, 0.9) },
+    DiagnosticVirtualTextInfo = { fg = p.ibad, bg = util.blend(p.bg_solid, p.ibad, 0.9) },
+    DiagnosticVirtualTextHint = { fg = p.water, bg = util.blend(p.bg_solid, p.water, 0.9) },
+    DiagnosticVirtualTextOk = { fg = p.oasis, bg = util.blend(p.bg_solid, p.oasis, 0.9) },
 
-    DiagnosticUnderlineError = { undercurl = true, sp = p.red02 },
-    DiagnosticUnderlineWarn = { undercurl = true, sp = p.yellow02 },
-    DiagnosticUnderlineInfo = { undercurl = true, sp = p.blue02 },
-    DiagnosticUnderlineHint = { undercurl = true, sp = p.cyan02 },
-    DiagnosticUnderlineOk = { undercurl = true, sp = p.green02 },
+    DiagnosticUnderlineError = { undercurl = true, sp = p.blood },
+    DiagnosticUnderlineWarn = { undercurl = true, sp = p.glowglobe },
+    DiagnosticUnderlineInfo = { undercurl = true, sp = p.ibad },
+    DiagnosticUnderlineHint = { undercurl = true, sp = p.water },
+    DiagnosticUnderlineOk = { undercurl = true, sp = p.oasis },
 
-    LspSignatureActiveParameter = { fg = p.orange03 },
-    LspCodeLens = { fg = p.base02 },
-    LspInlayHint = { fg = p.base01, bg = util.blend(p.bg_solid, p.base01, 0.9) },
-    LspInfoBorder = { fg = p.bg },
+    LspSignatureActiveParameter = { fg = p.spice },
+    LspCodeLens = { fg = p.muted },
+    LspInlayHint = { fg = p.muted, bg = util.blend(p.bg_solid, p.muted, 0.9) },
+    LspInfoBorder = { fg = p.highlight },
 
     -- Health check
-    healthError = { fg = p.red02 },
-    healthSuccess = { fg = p.green02 },
-    healthWarning = { fg = p.yellow02 },
+    healthError = { fg = p.blood },
+    healthSuccess = { fg = p.oasis },
+    healthWarning = { fg = p.glowglobe },
 
     -- Diff links
     diffAdded = { link = "DiffAdd" },

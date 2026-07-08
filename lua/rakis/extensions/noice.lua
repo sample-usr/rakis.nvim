@@ -8,65 +8,65 @@ function M.get(opts, p)
   opts = opts or {}
   local highlights = {
     -- Command line
-    NoiceCmdline = { fg = p.fg, bg = p.bg },
-    NoiceCmdlineIcon = { fg = p.cyan03 },
-    NoiceCmdlineIconSearch = { fg = p.yellow03 },
-    NoiceCmdlinePopup = { fg = p.fg, bg = p.bg },
-    NoiceCmdlinePopupBorder = { fg = p.bg_highlight, bg = p.bg },
-    NoiceCmdlinePopupBorderSearch = { fg = p.yellow03, bg = p.bg },
-    NoiceCmdlinePrompt = { fg = p.cyan03 },
+    NoiceCmdline = { fg = p.text, bg = p.bg },
+    NoiceCmdlineIcon = { fg = p.water },
+    NoiceCmdlineIconSearch = { fg = p.glowglobe },
+    NoiceCmdlinePopup = { fg = p.text, bg = p.bg },
+    NoiceCmdlinePopupBorder = { fg = p.highlight, bg = p.bg },
+    NoiceCmdlinePopupBorderSearch = { fg = p.glowglobe, bg = p.bg },
+    NoiceCmdlinePrompt = { fg = p.water },
 
     -- Confirm
-    NoiceConfirm = { fg = p.fg, bg = p.bg },
-    NoiceConfirmBorder = { fg = p.bg_highlight, bg = p.bg },
+    NoiceConfirm = { fg = p.text, bg = p.bg },
+    NoiceConfirmBorder = { fg = p.highlight, bg = p.bg },
 
     -- Cursor
-    NoiceCursor = { fg = p.bg, bg = p.fg },
+    NoiceCursor = { fg = p.bg, bg = p.text },
 
     -- Format
-    NoiceFormatConfirm = { fg = p.cyan03 },
-    NoiceFormatConfirmDefault = { fg = p.cyan03, bold = true },
-    NoiceFormatDate = { fg = p.base01 },
-    NoiceFormatEvent = { fg = p.base01 },
-    NoiceFormatKind = { fg = p.base01 },
-    NoiceFormatLevelDebug = { fg = p.base01 },
-    NoiceFormatLevelError = { fg = p.red02 },
-    NoiceFormatLevelInfo = { fg = p.blue02 },
-    NoiceFormatLevelOff = { fg = p.base01 },
-    NoiceFormatLevelTrace = { fg = p.violet02 },
-    NoiceFormatLevelWarn = { fg = p.yellow02 },
-    NoiceFormatProgressDone = { fg = p.green03, bg = p.bg_highlight },
-    NoiceFormatProgressTodo = { fg = p.base01, bg = p.bg_highlight },
-    NoiceFormatTitle = { fg = p.cyan03, bold = true },
+    NoiceFormatConfirm = { fg = p.water },
+    NoiceFormatConfirmDefault = { fg = p.water, bold = true },
+    NoiceFormatDate = { fg = p.subtle },
+    NoiceFormatEvent = { fg = p.subtle },
+    NoiceFormatKind = { fg = p.subtle },
+    NoiceFormatLevelDebug = { fg = p.subtle },
+    NoiceFormatLevelError = { fg = p.blood },
+    NoiceFormatLevelInfo = { fg = p.ibad },
+    NoiceFormatLevelOff = { fg = p.subtle },
+    NoiceFormatLevelTrace = { fg = p.dusk },
+    NoiceFormatLevelWarn = { fg = p.glowglobe },
+    NoiceFormatProgressDone = { fg = p.oasis, bg = p.highlight },
+    NoiceFormatProgressTodo = { fg = p.subtle, bg = p.highlight },
+    NoiceFormatTitle = { fg = p.water, bold = true },
 
     -- LSP messages
-    NoiceLspProgressClient = { fg = p.cyan03 },
-    NoiceLspProgressSpinner = { fg = p.cyan03 },
-    NoiceLspProgressTitle = { fg = p.fg },
+    NoiceLspProgressClient = { fg = p.water },
+    NoiceLspProgressSpinner = { fg = p.water },
+    NoiceLspProgressTitle = { fg = p.text },
 
     -- Mini
-    NoiceMini = { fg = p.fg, bg = p.bg },
+    NoiceMini = { fg = p.text, bg = p.bg },
 
     -- Popups
-    NoicePopup = { fg = p.fg, bg = p.bg },
-    NoicePopupBorder = { fg = p.bg_highlight, bg = p.bg },
+    NoicePopup = { fg = p.text, bg = p.bg },
+    NoicePopupBorder = { fg = p.highlight, bg = p.bg },
 
     -- Popupmenu
     NoicePopupmenu = { link = "Pmenu" },
-    NoicePopupmenuBorder = { fg = p.bg_highlight, bg = p.bg },
-    NoicePopupmenuMatch = { fg = p.cyan03, bold = true },
+    NoicePopupmenuBorder = { fg = p.highlight, bg = p.bg },
+    NoicePopupmenuMatch = { fg = p.water, bold = true },
     NoicePopupmenuSelected = { link = "PmenuSel" },
 
     -- Scrollbar
-    NoiceScrollbar = { fg = p.bg_highlight },
-    NoiceScrollbarThumb = { fg = p.base01, bg = p.bg_highlight },
+    NoiceScrollbar = { fg = p.highlight },
+    NoiceScrollbarThumb = { fg = p.subtle, bg = p.highlight },
 
     -- Split
-    NoiceSplit = { fg = p.fg, bg = p.bg },
-    NoiceSplitBorder = { fg = p.bg_highlight, bg = p.bg },
+    NoiceSplit = { fg = p.text, bg = p.bg },
+    NoiceSplitBorder = { fg = p.highlight, bg = p.bg },
 
     -- Virtual text
-    NoiceVirtualText = { fg = p.base01 },
+    NoiceVirtualText = { fg = p.subtle },
   }
   return highlights
 end

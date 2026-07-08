@@ -8,40 +8,40 @@ function M.get(opts, p)
   opts = opts or {}
   local highlights = {
     -- Git status
-    NeoTreeGitAdded = { fg = p.green03 },
-    NeoTreeGitConflict = { fg = p.orange03 },
-    NeoTreeGitDeleted = { fg = p.red03 },
-    NeoTreeGitIgnored = { fg = p.base01 },
-    NeoTreeGitModified = { fg = p.yellow03 },
-    NeoTreeGitRenamed = { fg = p.violet03 },
-    NeoTreeGitUntracked = { fg = p.cyan03 },
+    NeoTreeGitAdded = { fg = p.oasis },
+    NeoTreeGitConflict = { fg = p.spice },
+    NeoTreeGitDeleted = { fg = p.blood },
+    NeoTreeGitIgnored = { fg = p.subtle },
+    NeoTreeGitModified = { fg = p.glowglobe },
+    NeoTreeGitRenamed = { fg = p.dusk },
+    NeoTreeGitUntracked = { fg = p.water },
 
     -- Tabs
-    NeoTreeTabActive = { fg = p.fg, bg = p.bg_highlight },
-    NeoTreeTabInactive = { fg = p.base01, bg = p.bg },
+    NeoTreeTabActive = { fg = p.text, bg = p.highlight },
+    NeoTreeTabInactive = { fg = p.subtle, bg = p.bg },
     NeoTreeTabSeparatorActive = { link = "WinSeparator" },
     NeoTreeTabSeparatorInactive = { link = "WinSeparator" },
 
     -- Title bar
-    NeoTreeTitleBar = { fg = p.bg, bg = p.cyan03, bold = true },
+    NeoTreeTitleBar = { fg = p.bg, bg = p.water, bold = true },
 
     -- File/folder items
-    NeoTreeDirectoryIcon = { fg = p.cyan03 },
-    NeoTreeDirectoryName = { fg = p.cyan03 },
-    NeoTreeFileName = { fg = p.fg },
-    NeoTreeFileIcon = { fg = p.fg },
-    NeoTreeFileNameOpened = { fg = p.cyan01 },
-    NeoTreeIndentMarker = { fg = p.bg_highlight },
-    NeoTreeExpander = { fg = p.base01 },
-    NeoTreeRootName = { fg = p.cyan03, bold = true },
-    NeoTreeSymbolicLinkTarget = { fg = p.violet03 },
+    NeoTreeDirectoryIcon = { fg = p.water },
+    NeoTreeDirectoryName = { fg = p.water },
+    NeoTreeFileName = { fg = p.text },
+    NeoTreeFileIcon = { fg = p.text },
+    NeoTreeFileNameOpened = { fg = p.water },
+    NeoTreeIndentMarker = { fg = p.highlight },
+    NeoTreeExpander = { fg = p.subtle },
+    NeoTreeRootName = { fg = p.water, bold = true },
+    NeoTreeSymbolicLinkTarget = { fg = p.dusk },
 
     -- Floating window
-    NeoTreeFloatBorder = { fg = p.bg_highlight, bg = p.bg },
-    NeoTreeFloatTitle = { fg = p.cyan03, bg = p.bg },
+    NeoTreeFloatBorder = { fg = p.highlight, bg = p.bg },
+    NeoTreeFloatTitle = { fg = p.water, bg = p.bg },
 
     -- Window picker
-    NeoTreeWindowsHidden = { fg = p.base01 },
+    NeoTreeWindowsHidden = { fg = p.subtle },
   }
   return highlights
 end

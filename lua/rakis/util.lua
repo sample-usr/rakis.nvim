@@ -31,6 +31,17 @@ function M.lighten(hex, amount, fg)
   return M.blend(hex, fg or M.fg, amount)
 end
 
+--- Extend a palette with bright terminal variants derived from the accents.
+--- Keys are suffixed with "_bright" (e.g. blood_bright).
+--- @param t RakisPalette
+function M.with_terminal_brights(t)
+  local bright = {}
+  for _, key in ipairs({ "blood", "spice", "glowglobe", "oasis", "water", "ibad", "dusk", "bloom", "text" }) do
+    bright[key .. "_bright"] = M.blend("#ffffff", t[key], 0.25)
+  end
+  return vim.tbl_extend("force", t, bright)
+end
+
 function M.invert_color(color)
   local hsluv = require("rakis.hsluv")
   if color ~= "NONE" then
@@ -110,7 +121,7 @@ end
 --- @param title? string
 function M.notify(message, level, title)
   level = level or "info"
-  title = title or " cyberdream.nvim"
+  title = title or " rakis.nvim"
   local level_int = level == "info" and 2 or level == "warn" and 3 or 4
 
   vim.notify(message, level_int, { title = title })

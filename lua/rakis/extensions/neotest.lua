@@ -8,32 +8,32 @@ function M.get(opts, p)
   opts = opts or {}
   local highlights = {
     -- Test status
-    NeotestPassed = { fg = p.green03 },
-    NeotestFailed = { fg = p.red03 },
-    NeotestRunning = { fg = p.yellow03 },
-    NeotestSkipped = { fg = p.base01 },
-    NeotestUnknown = { fg = p.base01 },
-    NeotestWatching = { fg = p.violet03 },
+    NeotestPassed = { fg = p.oasis },
+    NeotestFailed = { fg = p.blood },
+    NeotestRunning = { fg = p.glowglobe },
+    NeotestSkipped = { fg = p.subtle },
+    NeotestUnknown = { fg = p.subtle },
+    NeotestWatching = { fg = p.dusk },
 
     -- UI elements
-    NeotestAdapterName = { fg = p.violet03 },
-    NeotestBorder = { fg = p.bg_highlight },
-    NeotestDir = { fg = p.cyan03 },
-    NeotestExpandMarker = { fg = p.bg_highlight },
-    NeotestFile = { fg = p.fg },
-    NeotestFocused = { fg = p.yellow03, bg = p.bg_highlight },
-    NeotestIndent = { fg = p.bg_highlight },
-    NeotestMarked = { fg = p.orange03, bold = true },
-    NeotestNamespace = { fg = p.cyan03 },
-    NeotestTarget = { fg = p.red03 },
-    NeotestTest = { fg = p.fg },
-    NeotestWinSelect = { fg = p.base01 },
+    NeotestAdapterName = { fg = p.dusk },
+    NeotestBorder = { fg = p.highlight },
+    NeotestDir = { fg = p.water },
+    NeotestExpandMarker = { fg = p.highlight },
+    NeotestFile = { fg = p.text },
+    NeotestFocused = { fg = p.glowglobe, bg = p.highlight },
+    NeotestIndent = { fg = p.highlight },
+    NeotestMarked = { fg = p.spice, bold = true },
+    NeotestNamespace = { fg = p.water },
+    NeotestTarget = { fg = p.blood },
+    NeotestTest = { fg = p.text },
+    NeotestWinSelect = { fg = p.subtle },
 
     -- Icons
-    NeotestPassedIcon = { fg = p.green03 },
-    NeotestFailedIcon = { fg = p.red03 },
-    NeotestRunningIcon = { fg = p.yellow03 },
-    NeotestSkippedIcon = { fg = p.base01 },
+    NeotestPassedIcon = { fg = p.oasis },
+    NeotestFailedIcon = { fg = p.blood },
+    NeotestRunningIcon = { fg = p.glowglobe },
+    NeotestSkippedIcon = { fg = p.subtle },
   }
   return highlights
 end

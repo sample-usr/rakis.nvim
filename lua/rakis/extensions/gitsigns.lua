@@ -7,17 +7,17 @@ local M = {}
 function M.get(opts, t)
   opts = opts or {}
   local highlights = {
-    GitSignsAdd = { fg = t.green02 },
-    GitSignsChange = { fg = t.orange02 },
-    GitSignsDelete = { fg = t.red02 },
+    GitSignsAdd = { fg = t.oasis },
+    GitSignsChange = { fg = t.spice },
+    GitSignsDelete = { fg = t.blood },
 
     GitSignsAddLn = { link = "DiffAdd" },
     GitSignsChangeLn = { link = "DiffChange" },
     GitSignsDeleteLn = { link = "DiffDelete" },
 
-    GitSignsAddInline = { bg = util.blend(t.bg_solid, t.green02, 0.9) },
-    GitSignsChangeInline = { bg = util.blend(t.bg_solid, t.blue02, 0.9) },
-    GitSignsDeleteInline = { bg = util.blend(t.bg_solid, t.red02, 0.9) },
+    GitSignsAddInline = { bg = util.blend(t.bg_solid, t.oasis, 0.9) },
+    GitSignsChangeInline = { bg = util.blend(t.bg_solid, t.ibad, 0.9) },
+    GitSignsDeleteInline = { bg = util.blend(t.bg_solid, t.blood, 0.9) },
 
     GitSignsCurrentLineBlame = { link = "LineNr" },
   }

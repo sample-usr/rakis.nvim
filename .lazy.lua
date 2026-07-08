@@ -49,7 +49,7 @@ local function load(group)
   cache[group] = {}
   local opts
   colors = require("rakis.colors").default
-  colors.bg_solid = colors.bg ~= "NONE" and colors.bg or colors.bg_highlight
+  colors.bg_solid = colors.bg ~= "NONE" and colors.bg or colors.surface
   opts = require("rakis.config").options
   local highlights = require("rakis.extensions." .. group).get(opts, colors)
   for k, v in pairs(highlights) do

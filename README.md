@@ -75,6 +75,23 @@ You can set the `light` or `dark` mode using the vim background options
 vim.o.background = "dark"
 ```
 
+## Palette
+
+The palette is drawn from the world of Dune: the dark variant is the deep desert night of a sietch, the light variant the same desert at noon. Accent hues are identical across both variants.
+
+| Key | Role |
+| --- | --- |
+| `bg`, `surface`, `overlay`, `highlight` | Background ramp: editor, panels/floats, subtle emphasis, selections |
+| `text`, `subtle`, `muted`, `faint` | Foreground ramp: code, comments, punctuation/line numbers, whitespace decoration |
+| `blood` | Errors, deletions, danger |
+| `spice` | Keywords, titles — the signature color |
+| `glowglobe` | Numbers, warnings, search |
+| `oasis` | Strings, additions, success |
+| `water` | Types, properties, hints |
+| `ibad` | Functions, links, info |
+| `dusk` | Constants, booleans, builtins |
+| `bloom` | Operators |
+
 ## Configuration
 
 Below is an example of all the available configuration options with their default values:
@@ -113,8 +130,8 @@ require("rakis").setup({
         overrides = function(colors) -- NOTE: This function nullifies the `highlights` option
             -- Example:
             return {
-                Comment = { fg = colors.green, bg = "NONE", italic = true },
-                ["@property"] = { fg = colors.magenta, bold = true },
+                Comment = { fg = colors.oasis, bg = "NONE", italic = true },
+                ["@property"] = { fg = colors.bloom, bold = true },
             }
         end,
 
@@ -122,7 +139,7 @@ require("rakis").setup({
         colors = {
             -- Example:
             bg = "#000000",
-            bg_highlight = "#00ff00",
+            spice = "#ff9000",
         },
     },
 
