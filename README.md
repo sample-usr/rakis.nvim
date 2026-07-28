@@ -18,16 +18,49 @@ A cozy theme for late desert nights or early mornings
 <details>
 <summary>Supported neovim plugins</summary>
 
-- [alpha-nvim](https://github.com/goolord/alpha-nvim)
-- [nvim-cmp](https://github.com/hrsh7th/nvim-cmp)
-- [dashboard-nvim](https://github.com/nvimdev/dashboard-nvim)
-- [gitsigns.nvim](https://github.com/lewis6991/gitsigns.nvim)
-- [lazy.nvim](https://github.com/folke/lazy.nvim)
-- [mini.nvim](https://github.com/echasnovski/mini.nvim)
-- [nvim-notify](https://github.com/rcarriga/nvim-notify)
-- [telescope.nvim](https://github.com/nvim-telescope/telescope.nvim)
-- [trouble.nvim](https://github.com/folke/trouble.nvim)
-- [which-key.nvim](https://github.com/folke/which-key.nvim)
+The name in backticks is the key to use under `extensions` in your config.
+
+- [aerial.nvim](https://github.com/stevearc/aerial.nvim) — `aerial`
+- [alpha-nvim](https://github.com/goolord/alpha-nvim) — `alpha`
+- [avante.nvim](https://github.com/yetone/avante.nvim) — `avante`
+- [barbar.nvim](https://github.com/romgrk/barbar.nvim) — `barbar`
+- [blink.cmp](https://github.com/Saghen/blink.cmp) — `blink_cmp`
+- [bufferline.nvim](https://github.com/akinsho/bufferline.nvim) — `bufferline`
+- [copilot.vim](https://github.com/github/copilot.vim) / [copilot.lua](https://github.com/zbirenbaum/copilot.lua) — `copilot`
+- [dashboard-nvim](https://github.com/nvimdev/dashboard-nvim) — `dashboard`
+- [diffview.nvim](https://github.com/sindrets/diffview.nvim) — `diffview`
+- [flash.nvim](https://github.com/folke/flash.nvim) — `flash`
+- [fzf-lua](https://github.com/ibhagwan/fzf-lua) — `fzf_lua`
+- [gitsigns.nvim](https://github.com/lewis6991/gitsigns.nvim) — `gitsigns`
+- [grug-far.nvim](https://github.com/MagicDuck/grug-far.nvim) — `grug_far`
+- [indent-blankline.nvim](https://github.com/lukas-reineke/indent-blankline.nvim) — `indent_blankline`
+- [lazy.nvim](https://github.com/folke/lazy.nvim) — `lazy`
+- [lazygit.nvim](https://github.com/kdheepak/lazygit.nvim) — `lazygit`
+- [lsp_lines.nvim](https://git.sr.ht/~whynothugo/lsp_lines.nvim) — `lsp_lines`
+- [lualine.nvim](https://github.com/nvim-lualine/lualine.nvim) — `lualine`
+- [mini.nvim](https://github.com/echasnovski/mini.nvim) — `mini`
+- [neogit](https://github.com/NeogitOrg/neogit) — `neogit`
+- [neo-tree.nvim](https://github.com/nvim-neo-tree/neo-tree.nvim) — `neotree`
+- [neotest](https://github.com/nvim-neotest/neotest) — `neotest`
+- [noice.nvim](https://github.com/folke/noice.nvim) — `noice`
+- [nvim-cmp](https://github.com/hrsh7th/nvim-cmp) — `cmp`
+- [nvim-dap-ui](https://github.com/rcarriga/nvim-dap-ui) — `dap`
+- [nvim-lint](https://github.com/mfussenegger/nvim-lint) — `nvim_lint`
+- [nvim-notify](https://github.com/rcarriga/nvim-notify) — `nvim_notify`
+- [nvim-tree.lua](https://github.com/nvim-tree/nvim-tree.lua) — `nvim_tree`
+- [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter) — `treesitter`
+- [nvim-treesitter-context](https://github.com/nvim-treesitter/nvim-treesitter-context) — `treesitter_context`
+- [rainbow-delimiters.nvim](https://github.com/HiPhish/rainbow-delimiters.nvim) — `rainbow_delimiters`
+- [render-markdown.nvim](https://github.com/MeanderingProgrammer/render-markdown.nvim) — `render_markdown`
+- [snacks.nvim](https://github.com/folke/snacks.nvim) — `snacks`
+- [telescope.nvim](https://github.com/nvim-telescope/telescope.nvim) — `telescope`
+- [toggleterm.nvim](https://github.com/akinsho/toggleterm.nvim) — `toggleterm`
+- [trouble.nvim](https://github.com/folke/trouble.nvim) — `trouble`
+- [vim-fugitive](https://github.com/tpope/vim-fugitive) — `fugitive`
+- [vim-illuminate](https://github.com/RRethy/vim-illuminate) — `illuminate`
+- [which-key.nvim](https://github.com/folke/which-key.nvim) — `whichkey`
+
+Plus `lsp` for LSP semantic tokens and diagnostics, which needs no plugin.
 
 </details>
 
